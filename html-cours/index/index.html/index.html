@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موسوعة مواقع التواصل الاجتماعي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* شاشة التحميل */
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #2196F3;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      z-index: 9999;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    #loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    header {
+      background-color: #2196F3;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      animation: slideDown 1s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin: 25px 0;
+      padding: 20px;
+      text-align: center;
+      transform: translateY(50px);
+      opacity: 0;
+      transition: all 0.8s ease;
+    }
+    .card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .card img {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 15px;
+      object-fit: contain;
+    }
+    .card h2 {
+      font-size: 26px;
+      margin: 10px 0;
+      color: #2196F3;
+    }
+    .card p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .card h3 {
+      margin-top: 20px;
+      color: #0b7dda;
+    }
+    .card ul {
+      text-align: right;
+      list-style-position: inside;
+      font-size: 18px;
+      color: #555;
+      margin: 10px 0;
+    }
+    .card a.button {
+      display: inline-block;
+      background-color: #2196F3;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 15px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .card a.button:hover {
+      background-color: #0b7dda;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<!-- شاشة التحميل -->
+<div id="loader">جاري التحميل...</div>
+
+<header>موسوعة مواقع التواصل الاجتماعي</header>
+
+<div class="container">
+
+  <!-- Instagram -->
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram Logo">
+    <h2>إنستغرام (Instagram)</h2>
+    <p>إنستغرام هو تطبيق عالمي لمشاركة الصور ومقاطع الفيديو القصيرة. تأسس عام 2010 بواسطة كيفن سيستروم ومايك كريجر.</p>
+    
+    <h3>مميزاته:</h3>
+    <ul>
+      <li>مشاركة الصور والفيديوهات بسهولة.</li>
+      <li>ميزة القصص اليومية (Stories).</li>
+      <li>الفلاتر والتأثيرات على الصور.</li>
+      <li>رسائل مباشرة بين المستخدمين.</li>
+      <li>Reels للفيديوهات القصيرة والممتعة.</li>
+    </ul>
+
+    <h3>حقائق سريعة:</h3>
+    <ul>
+      <li>أكثر من مليار مستخدم نشط شهريًا.</li>
+      <li>يتم تحميل أكثر من 95 مليون صورة يوميًا.</li>
+      <li>استحوذ عليه فيسبوك عام 2012.</li>
+    </ul>
+
+    <a href="https://www.instagram.com/" class="button" target="_blank">زيارة إنستغرام</a>
+  </div>
+
+  <!-- Facebook -->
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+    <h2>فيسبوك (Facebook)</h2>
+    <p>فيسبوك هو أضخم شبكة تواصل اجتماعي أسسها مارك زوكربيرغ عام 2004. تهدف لربط الناس حول العالم.</p>
+    
+    <h3>مميزاته:</h3>
+    <ul>
+      <li>إنشاء ملفات شخصية وصفحات عامة.</li>
+      <li>نشر صور ومنشورات وفيديوهات.</li>
+      <li>مجموعات للنقاش والاهتمامات المشتركة.</li>
+      <li>إعلانات ممولة للأعمال التجارية.</li>
+      <li>مكالمات فيديو عبر Messenger.</li>
+    </ul>
+
+    <h3>حقائق سريعة:</h3>
+    <ul>
+      <li>يستخدمه أكثر من 2.9 مليار شخص شهريًا.</li>
+      <li>يتوفر بأكثر من 100 لغة.</li>
+      <li>استحوذ على إنستغرام وواتساب.</li>
+    </ul>
+
+    <a href="https://www.facebook.com/" class="button" target="_blank">زيارة فيسبوك</a>
+  </div>
+
+  <!-- Twitter -->
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter Logo">
+    <h2>تويتر (Twitter)</h2>
+    <p>تويتر هو شبكة تواصل مختصة بالتغريدات القصيرة. أسسه جاك دورسي في 2006 ليتحول إلى أداة أخبار عالمية.</p>
+    
+    <h3>مميزاته:</h3>
+    <ul>
+      <li>نشر تغريدات قصيرة حتى 280 حرف.</li>
+      <li>المتابعة باستخدام الهاشتاغات.</li>
+      <li>المساحات الصوتية (Spaces) للنقاش المباشر.</li>
+      <li>مشاركة الصور والفيديوهات.</li>
+      <li>التفاعل السريع عبر الإعجابات وإعادة التغريد.</li>
+    </ul>
+
+    <h3>حقائق سريعة:</h3>
+    <ul>
+      <li>يتم نشر أكثر من 500 مليون تغريدة يوميًا.</li>
+      <li>تمت إعادة تسميته مؤخرًا إلى "X" بواسطة إيلون ماسك.</li>
+      <li>منصة شهيرة للأحداث العاجلة.</li>
+    </ul>
+
+    <a href="https://twitter.com/" class="button" target="_blank">زيارة تويتر</a>
+  </div>
+
+  <!-- Snapchat -->
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Snapchat_logo.svg" alt="Snapchat Logo">
+    <h2>سناب شات (Snapchat)</h2>
+    <p>سناب شات تطبيق رسائل مصورة، يسمح بإرسال صور وفيديوهات قصيرة تختفي بعد مشاهدتها. أُطلق عام 2011.</p>
+    
+    <h3>مميزاته:</h3>
+    <ul>
+      <li>مراسلة فورية بالصور والفيديوهات.</li>
+      <li>قصص قصيرة من الحياة اليومية.</li>
+      <li>مرشحات وعدسات ممتعة (Lenses).</li>
+      <li>ميزة Snap Map لمشاركة الموقع.</li>
+      <li>دردشة جماعية.</li>
+    </ul>
+
+    <h3>حقائق سريعة:</h3>
+    <ul>
+      <li>يستخدمه أكثر من 400 مليون شخص يوميًا.</li>
+      <li>أحد أوائل التطبيقات التي تبنت القصص اليومية.</li>
+      <li>شعاره الشهير هو الشبح الأبيض.</li>
+    </ul>
+
+    <a href="https://www.snapchat.com/" class="button" target="_blank">زيارة سناب شات</a>
+  </div>
+
+  <!-- TikTok -->
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/TikTok_logo.svg" alt="TikTok Logo">
+    <h2>تيك توك (TikTok)</h2>
+    <p>تيك توك هو تطبيق لمشاركة مقاطع الفيديو القصيرة مع تأثيرات موسيقية وإبداعية. تم إطلاقه عام 2016 بواسطة شركة ByteDance.</p>
+    
+    <h3>مميزاته:</h3>
+    <ul>
+      <li>تسجيل فيديوهات قصيرة مع مؤثرات صوتية.</li>
+      <li>خوارزمية ذكية لعرض المحتوى المفضل.</li>
+      <li>تحديات وهاشتاغات شعبية.</li>
+      <li>مكتبة موسيقى ضخمة.</li>
+      <li>ميزة البث المباشر للمؤثرين.</li>
+    </ul>
+
+    <h3>حقائق سريعة:</h3>
+    <ul>
+      <li>واحد من أكثر التطبيقات تحميلًا في العالم.</li>
+      <li>ينتشر بقوة بين الفئات الشابة (13-24 سنة).</li>
+      <li>تم دمجه مع تطبيق "Musical.ly" في بدايته.</li>
+    </ul>
+
+    <a href="https://www.tiktok.com/" class="button" target="_blank">زيارة تيك توك</a>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 جميع الحقوق محفوظة | تصميم خاص بموسوعة التواصل الاجتماعي
+</footer>
+
+<script>
+  window.addEventListener('load', () => {
+    document.getElementById('loader').classList.add('hidden');
+  });
+
+  const cards = document.querySelectorAll('.card');
+  window.addEventListener('scroll', checkCards);
+
+  function checkCards() {
+    const triggerBottom = window.innerHeight * 0.9;
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      if(cardTop < triggerBottom) {
+        card.classList.add('show');
+      }
+    });
+  }
+
+  checkCards();
+</script>
+
+</body>
+</html>
