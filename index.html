@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>موسوعة تطبيقات التواصل الاجتماعي</title>
   <style>
     body {
@@ -21,22 +21,22 @@
 
     header h1 {
       margin: 0;
-      font-size: 40px;
+      font-size: 36px;
       color: #fff;
     }
 
     .container {
-      max-width: 950px;
+      max-width: 960px;
       margin: auto;
       padding: 20px;
     }
 
     .section {
       background-color: #1c1c1c;
-      border-radius: 12px;
+      border-radius: 15px;
       padding: 25px;
       margin-bottom: 25px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+      box-shadow: 0 0 12px rgba(0,0,0,0.6);
       transition: transform 0.3s;
     }
 
@@ -48,6 +48,7 @@
       color: #1da1f2;
       display: flex;
       align-items: center;
+      margin-bottom: 15px;
     }
 
     .section img {
@@ -56,16 +57,22 @@
       margin-left: 10px;
     }
 
-    a {
-      color: #1da1f2;
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 15px;
+      background: linear-gradient(45deg, #1da1f2, #833ab4);
+      color: #fff;
       text-decoration: none;
+      border-radius: 30px;
+      font-size: 16px;
+      transition: background 0.3s ease;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .btn:hover {
+      background: linear-gradient(45deg, #00c6ff, #7f00ff);
     }
 
-    /* فريق العمل */
     .team {
       display: flex;
       flex-wrap: wrap;
@@ -78,7 +85,7 @@
       background-color: #2a2a2a;
       padding: 18px;
       border-radius: 12px;
-      width: 170px;
+      width: 200px;
       text-align: center;
       box-shadow: 0 0 10px rgba(0,0,0,0.6);
       transition: transform 0.3s;
@@ -125,6 +132,26 @@
       background-color: #111;
       margin-top: 40px;
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      .member {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -137,57 +164,57 @@
 
     <div class="section">
       <h2><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="">إنستغرام</h2>
-      <p>تطبيق شهير يتيح للمستخدمين مشاركة الصور والفيديوهات القصيرة مع متابعينهم. يتميز بميزات القصص، الريلز، والفلاتر.</p>
-      <p><a href="https://www.instagram.com" target="_blank">زيارة الموقع</a></p>
+      <p>تطبيق شهير لمشاركة الصور والفيديوهات، يتيح لك التعبير عن نفسك عبر القصص والريلز والتفاعل مع الأصدقاء.</p>
+      <a href="https://www.instagram.com" target="_blank" class="btn">اذهب إلى إنستغرام</a>
     </div>
 
     <div class="section">
-      <h2><img src="https://upload.wikimedia.org/wikipedia/en/6/69/TikTok_logo.svg" alt="">تيك توك</h2>
-      <p>منصة فيديوهات قصيرة تتميز بمؤثرات مرئية وصوتية، وتُعد من أسرع التطبيقات نموًا في العالم.</p>
-      <p><a href="https://www.tiktok.com" target="_blank">زيارة الموقع</a></p>
+      <h2><img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/TikTok_logo.png" alt="">تيك توك</h2>
+      <p>أشهر منصة للفيديوهات القصيرة والموسيقى، مليئة بالتحديات والفلترات والتفاعل الإبداعي مع المجتمع.</p>
+      <a href="https://www.tiktok.com" target="_blank" class="btn">اذهب إلى تيك توك</a>
     </div>
 
     <div class="section">
       <h2><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Snapchat_logo.svg/768px-Snapchat_logo.svg.png" alt="">سناب شات</h2>
-      <p>تطبيق مشاركة لحظات الحياة اليومية من خلال الصور والفيديوهات التي تُعرض لفترة قصيرة، ويشتهر بعدساته الفريدة.</p>
-      <p><a href="https://www.snapchat.com" target="_blank">زيارة الموقع</a></p>
+      <p>تواصل مع الأصدقاء من خلال القصص والصور والفيديوهات المؤقتة، وتمتع بعدسات فريدة وتجربة ممتعة.</p>
+      <a href="https://www.snapchat.com" target="_blank" class="btn">اذهب إلى سناب شات</a>
     </div>
 
     <div class="section">
       <h2><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="">فيسبوك</h2>
-      <p>منصة تواصل اجتماعي عملاقة تتيح إنشاء حسابات، صفحات، مجموعات، ونشر منشورات وصور وفيديوهات.</p>
-      <p><a href="https://www.facebook.com" target="_blank">زيارة الموقع</a></p>
+      <p>منصة التواصل الأكبر، تقدم لك فرصة للتفاعل مع العائلة والأصدقاء، وإنشاء مجموعات وصفحات وإعلانات.</p>
+      <a href="https://www.facebook.com" target="_blank" class="btn">اذهب إلى فيسبوك</a>
     </div>
 
     <div class="section">
       <h2><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="">تويتر</h2>
-      <p>يُستخدم لنشر التغريدات ومتابعة الأحداث الجارية. يشتهر بالتفاعل الفوري والمحتوى السريع.</p>
-      <p><a href="https://www.twitter.com" target="_blank">زيارة الموقع</a></p>
+      <p>تويتر هو صوتك للعالم، شارك أفكارك وتفاعل مع الأخبار والهاشتاقات في الوقت الحقيقي.</p>
+      <a href="https://www.twitter.com" target="_blank" class="btn">اذهب إلى تويتر</a>
     </div>
 
     <!-- فريق العمل -->
     <div class="section">
       <h2>فريق العمل</h2>
-      <p>هؤلاء هم صناع هذه التحفة الرقمية 👇</p>
+      <p>هؤلاء هم الأبطال وراء هذا المشروع الرائع:</p>
       <div class="team">
         <div class="member">
           <div class="avatar">ر</div>
-          <div class="name">رؤوف</div>
+          <div class="name">عبدالرؤوف بوصبيعة</div>
           <div class="role highlight">المشرف العام</div>
         </div>
         <div class="member">
           <div class="avatar">ي</div>
-          <div class="name">يعقوب</div>
+          <div class="name">يعقوب صابور</div>
           <div class="role">مصمم واجهات</div>
         </div>
         <div class="member">
           <div class="avatar">ص</div>
-          <div class="name">صهيب</div>
+          <div class="name">برازة صهيب</div>
           <div class="role">مبرمج</div>
         </div>
         <div class="member">
           <div class="avatar">أ</div>
-          <div class="name">أيمن</div>
+          <div class="name">أيمن بخوش</div>
           <div class="role">منسق المحتوى</div>
         </div>
       </div>
@@ -196,7 +223,7 @@
   </div>
 
   <footer>
-    &copy; 2025 - تم التصميم بإبداع بواسطة فريق رؤوف 👑
+    &copy; 2025 - تم التصميم والإبداع بواسطة فريق عبدالرؤوف بوصبيعة 👑
   </footer>
 
 </body>
