@@ -3,54 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>موسوعة التواصل الاجتماعي</title>
+  <title>موسوعة تطبيقات التواصل الاجتماعي</title>
   <style>
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
-      background-color: #111;
+      background-color: #0f0f0f;
       color: #fff;
       line-height: 1.8;
     }
 
     header {
-      background-color: #222;
+      background: linear-gradient(90deg, #1da1f2, #833ab4);
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 36px;
-      color: #1da1f2;
+      font-size: 40px;
+      color: #fff;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 950px;
       margin: auto;
       padding: 20px;
     }
 
     .section {
       background-color: #1c1c1c;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .section:hover {
+      transform: scale(1.01);
     }
 
     .section h2 {
       color: #1da1f2;
+      display: flex;
+      align-items: center;
     }
 
     .section img {
-      width: 30px;
-      vertical-align: middle;
+      width: 32px;
+      height: 32px;
       margin-left: 10px;
     }
 
     a {
-      color: #00acee;
+      color: #1da1f2;
       text-decoration: none;
     }
 
@@ -64,16 +71,16 @@
       flex-wrap: wrap;
       gap: 15px;
       justify-content: center;
-      margin-top: 15px;
+      margin-top: 20px;
     }
 
     .member {
       background-color: #2a2a2a;
-      padding: 15px;
-      border-radius: 10px;
-      width: 160px;
+      padding: 18px;
+      border-radius: 12px;
+      width: 170px;
       text-align: center;
-      box-shadow: 0 0 8px rgba(0,0,0,0.5);
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
       transition: transform 0.3s;
     }
 
@@ -82,12 +89,12 @@
     }
 
     .avatar {
-      width: 50px;
-      height: 50px;
+      width: 55px;
+      height: 55px;
       background-color: #1da1f2;
       color: white;
       border-radius: 50%;
-      font-size: 22px;
+      font-size: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -96,7 +103,8 @@
 
     .name {
       font-weight: bold;
-      color: #eee;
+      color: #fff;
+      font-size: 16px;
     }
 
     .role {
@@ -104,11 +112,18 @@
       color: #aaa;
     }
 
+    .highlight {
+      color: gold;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       font-size: 14px;
-      color: #888;
+      color: #aaa;
+      background-color: #111;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -122,58 +137,58 @@
 
     <div class="section">
       <h2><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="">إنستغرام</h2>
-      <p>تطبيق لمشاركة الصور والفيديوهات، يتميز بالقصص والريلز والتفاعل عبر الإعجابات والتعليقات.</p>
-      <p><a href="https://www.instagram.com" target="_blank">رابط الموقع</a></p>
+      <p>تطبيق شهير يتيح للمستخدمين مشاركة الصور والفيديوهات القصيرة مع متابعينهم. يتميز بميزات القصص، الريلز، والفلاتر.</p>
+      <p><a href="https://www.instagram.com" target="_blank">زيارة الموقع</a></p>
     </div>
 
     <div class="section">
       <h2><img src="https://upload.wikimedia.org/wikipedia/en/6/69/TikTok_logo.svg" alt="">تيك توك</h2>
-      <p>منصة لمشاركة الفيديوهات القصيرة، يتيح استخدام الموسيقى والتأثيرات والفلاتر لإنشاء محتوى ترفيهي.</p>
-      <p><a href="https://www.tiktok.com" target="_blank">رابط الموقع</a></p>
+      <p>منصة فيديوهات قصيرة تتميز بمؤثرات مرئية وصوتية، وتُعد من أسرع التطبيقات نموًا في العالم.</p>
+      <p><a href="https://www.tiktok.com" target="_blank">زيارة الموقع</a></p>
     </div>
 
     <div class="section">
       <h2><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Snapchat_logo.svg/768px-Snapchat_logo.svg.png" alt="">سناب شات</h2>
-      <p>يستخدم لمشاركة الصور والفيديوهات التي تختفي بعد المشاهدة، ويحتوي على عدسات تفاعلية ممتعة.</p>
-      <p><a href="https://www.snapchat.com" target="_blank">رابط الموقع</a></p>
+      <p>تطبيق مشاركة لحظات الحياة اليومية من خلال الصور والفيديوهات التي تُعرض لفترة قصيرة، ويشتهر بعدساته الفريدة.</p>
+      <p><a href="https://www.snapchat.com" target="_blank">زيارة الموقع</a></p>
     </div>
 
     <div class="section">
       <h2><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="">فيسبوك</h2>
-      <p>منصة عملاقة للتواصل الاجتماعي، تُستخدم للمحادثات، الصفحات، المجموعات، والإعلانات.</p>
-      <p><a href="https://www.facebook.com" target="_blank">رابط الموقع</a></p>
+      <p>منصة تواصل اجتماعي عملاقة تتيح إنشاء حسابات، صفحات، مجموعات، ونشر منشورات وصور وفيديوهات.</p>
+      <p><a href="https://www.facebook.com" target="_blank">زيارة الموقع</a></p>
     </div>
 
     <div class="section">
       <h2><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="">تويتر</h2>
-      <p>يعتمد على التغريدات القصيرة لمشاركة الأخبار والآراء والتفاعل مع المتابعين حول العالم.</p>
-      <p><a href="https://www.twitter.com" target="_blank">رابط الموقع</a></p>
+      <p>يُستخدم لنشر التغريدات ومتابعة الأحداث الجارية. يشتهر بالتفاعل الفوري والمحتوى السريع.</p>
+      <p><a href="https://www.twitter.com" target="_blank">زيارة الموقع</a></p>
     </div>
 
     <!-- فريق العمل -->
     <div class="section">
       <h2>فريق العمل</h2>
-      <p>الأبطال الذين ساهموا في إعداد هذا المشروع المميز:</p>
+      <p>هؤلاء هم صناع هذه التحفة الرقمية 👇</p>
       <div class="team">
+        <div class="member">
+          <div class="avatar">ر</div>
+          <div class="name">رؤوف</div>
+          <div class="role highlight">المشرف العام</div>
+        </div>
         <div class="member">
           <div class="avatar">ي</div>
           <div class="name">يعقوب</div>
           <div class="role">مصمم واجهات</div>
         </div>
         <div class="member">
-          <div class="avatar">ر</div>
-          <div class="name">رؤوف</div>
-          <div class="role">كاتب المحتوى</div>
-        </div>
-        <div class="member">
           <div class="avatar">ص</div>
           <div class="name">صهيب</div>
-          <div class="role">مبرمج رئيسي</div>
+          <div class="role">مبرمج</div>
         </div>
         <div class="member">
           <div class="avatar">أ</div>
           <div class="name">أيمن</div>
-          <div class="role">منسق البيانات</div>
+          <div class="role">منسق المحتوى</div>
         </div>
       </div>
     </div>
@@ -181,7 +196,7 @@
   </div>
 
   <footer>
-    &copy; 2025 - جميع الحقوق محفوظة لفريق الإبداع
+    &copy; 2025 - تم التصميم بإبداع بواسطة فريق رؤوف 👑
   </footer>
 
 </body>
