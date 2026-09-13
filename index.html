@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>رفيق البكالوريا 2027</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
   :root{
     --bg:#12181d;
@@ -36,8 +38,13 @@
 
   body{
     background:
-      radial-gradient(circle at 1px 1px, rgba(215,166,60,.09) 1px, transparent 0) 0 0/22px 22px,
+      radial-gradient(
+        circle at 1px 1px,
+        rgba(215,166,60,.09) 1px,
+        transparent 0
+      ) 0 0/22px 22px,
       var(--bg);
+
     color:var(--text);
     font-family:'IBM Plex Sans Arabic', sans-serif;
     min-height:100vh;
@@ -58,7 +65,8 @@
     border:none;
   }
 
-  input,textarea{
+  input,
+  textarea{
     font-family:inherit;
     background:var(--surface-2);
     border:1px solid var(--border);
@@ -93,8 +101,13 @@
     border:1px solid var(--border);
   }
 
-  .ticket::before{left:-10px;}
-  .ticket::after{right:-10px;}
+  .ticket::before{
+    left:-10px;
+  }
+
+  .ticket::after{
+    right:-10px;
+  }
 
   .seal{
     position:absolute;
@@ -132,6 +145,7 @@
       opacity:0;
       transform:translateY(10px);
     }
+
     to{
       opacity:1;
       transform:translateY(0);
@@ -171,11 +185,13 @@
   }
 
   .countdown-hero{
-    background:linear-gradient(
-      160deg,
-      var(--surface) 0%,
-      var(--surface-2) 100%
-    );
+    background:
+      linear-gradient(
+        160deg,
+        var(--surface) 0%,
+        var(--surface-2) 100%
+      );
+
     border:1px solid var(--border);
     border-radius:var(--radius-lg);
     padding:34px 22px 30px;
@@ -265,7 +281,9 @@
     border-radius:var(--radius-sm);
     font-size:15px;
     font-weight:600;
-    transition:transform .12s ease,opacity .12s ease;
+    transition:
+      transform .12s ease,
+      opacity .12s ease;
   }
 
   .btn:active{
@@ -400,2466 +418,1462 @@
     gap:14px;
   }
 
-  .mini-countdown
+  .mini-countdown{
+    font-size:13px;
+    color:var(--text-muted);
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    padding:7px 12px;
+    border-radius:100px;
+  }
+
+  .mini-countdown b{
+    color:var(--gold);
+    font-family:'Tajawal',sans-serif;
+  }
+
+  .logout-btn{
+    color:var(--text-muted);
+    background:transparent;
+    font-size:13px;
+    text-decoration:underline;
+  }
+
+  nav.tabs{
+    display:flex;
+    gap:6px;
+    padding:10px 18px;
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
+    overflow-x:auto;
+  }
+
+  .tab-btn{
+    background:transparent;
+    color:var(--text-muted);
+    padding:9px 16px;
+    border-radius:100px;
+    font-size:14px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+
+  .tab-btn.active{
+    background:var(--accent);
+    color:var(--accent-text);
+  }
+
+  main{
+    flex:1;
+    padding:22px 18px 60px;
+    max-width:760px;
+    margin:0 auto;
+    width:100%;
+  }
+
+  .tab-panel h2{
+    font-size:19px;
+    margin:0 0 4px;
+  }
+
+  .panel-sub{
+    color:var(--text-muted);
+    font-size:13.5px;
+    margin:0 0 20px;
+  }
+
+  /* today tab */
+
+  .date-nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius-md);
+    padding:12px 16px;
+    margin-bottom:18px;
+  }
+
+  .date-nav button{
+    background:var(--surface-2);
+    color:var(--text);
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    font-size:16px;
+  }
+
+  .date-nav .date-label{
+    text-align:center;
+  }
+
+  .date-nav .date-label .d1{
+    font-weight:700;
+    font-size:15px;
+  }
+
+  .date-nav .date-label .d2{
+    font-size:12px;
+    color:var(--text-muted);
+  }
+
+  .task-list{
+    list-style:none;
+    margin:0 0 14px;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .task-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius-sm);
+    padding:12px 14px;
+  }
+
+  .task-item.done{
+    opacity:.55;
+  }
+
+  .task-item .check{
+    width:22px;
+    height:22px;
+    border-radius:6px;
+    border:2px solid var(--gold-dim);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    color:transparent;
+    font-size:14px;
+  }
+
+  .task-item.done .check{
+    background:var(--green);
+    border-color:var(--green);
+    color:#fff;
+  }
+
+  .task-item .label{
+    flex:1;
+    font-size:14.5px;
+  }
+
+  .task-item.done .label{
+    text-decoration:line-through;
+  }
+
+  .task-item .remove{
+    background:transparent;
+    color:var(--text-muted);
+    font-size:13px;
+  }
+
+  .add-task-row{
+    display:flex;
+    gap:8px;
+    margin-bottom:22px;
+  }
+
+  .add-task-row input{
+    flex:1;
+  }
+
+  .add-task-row button{
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    color:var(--text);
+    border-radius:var(--radius-sm);
+    padding:0 16px;
+    font-size:14px;
+  }
+
+  .journal-box textarea{
+    min-height:110px;
+    resize:vertical;
+  }
+
+  .save-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-top:16px;
+  }
+
+  .save-status{
+    font-size:13px;
+    color:var(--green);
+    opacity:0;
+    transition:opacity .3s;
+  }
+
+  .save-status.show{
+    opacity:1;
+  }
+
+  /* calendar tab */
+
+  .month-block{
+    margin-bottom:26px;
+  }
+
+  .month-block h3{
+    font-size:15.5px;
+    margin:0 0 10px;
+    font-weight:700;
+  }
+
+  .cal-grid{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:6px;
+  }
+
+  .cal-head{
+    text-align:center;
+    font-size:11px;
+    color:var(--text-muted);
+    padding-bottom:4px;
+  }
+
+  .cal-cell{
+    aspect-ratio:1;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12.5px;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    color:var(--text-muted);
+  }
+
+  .cal-cell.empty{
+    background:transparent;
+    border-color:transparent;
+  }
+
+  .cal-cell.active-day{
+    background:var(--green-dim);
+    border-color:var(--green);
+    color:#bfe9d7;
+    cursor:pointer;
+    font-weight:600;
+  }
+
+  .cal-cell.today{
+    border-color:var(--gold);
+    color:var(--gold);
+    font-weight:700;
+  }
+
+  .cal-cell.future{
+    cursor:pointer;
+  }
+
+  .cal-cell.missed{
+    cursor:pointer;
+    border-color:var(--red);
+    color:#d99b93;
+  }
+
+  .cal-cell.exam-day{
+    background:var(--accent-dim);
+    border-color:var(--accent);
+    color:var(--accent-text);
+      <!-- TODAY -->
+      <section class="tab-panel" id="tab-today">
+        <h2>يوميات المذاكرة</h2>
+        <p class="panel-sub">اضبط مهامك ليوم واحد، ودوّن ما أنجزته فعلاً.</p>
+
+        <div class="date-nav">
+          <button id="date-prev">›</button>
+          <div class="date-label">
+            <div class="d1" id="date-d1">—</div>
+            <div class="d2" id="date-d2">—</div>
+          </div>
+          <button id="date-next">‹</button>
+        </div>
+
+        <div id="nudge-banner" class="hidden" style="background:var(--surface-2); border:1px dashed var(--gold-dim); border-radius:var(--radius-sm); padding:10px 14px; font-size:13px; color:var(--text-muted); margin-bottom:16px;">
+          لم تسجّل أي نشاط لليوم بعد — خصّص لو 10 دقائق الآن، أفضل من لا شيء.
+        </div>
+
+        <div id="daily-quote" style="font-size:13px; color:var(--accent); background:var(--surface); border-right:3px solid var(--accent); border-radius:var(--radius-sm); padding:10px 14px; margin-bottom:16px;"></div>
+
+        <ul class="task-list" id="task-list"></ul>
+
+        <div class="add-task-row">
+          <input id="new-task-input" type="text" placeholder="أضف مهمة خاصة بهذا اليوم...">
+          <button id="btn-add-task">إضافة</button>
+        </div>
+
+        <div class="journal-box">
+          <label for="journal-text" style="display:block; font-size:13.5px; color:var(--text-muted); margin-bottom:8px;">
+            ماذا فعلت في هذا اليوم؟
+          </label>
+          <textarea id="journal-text" placeholder="اكتب ملاحظاتك: ما الذي فهمته، ما الذي يحتاج مراجعة أكثر..."></textarea>
+        </div>
+
+        <div class="save-row">
+          <button class="btn btn-primary" id="btn-save-day" style="flex:none; padding:12px 26px;">
+            حفظ اليوم
+          </button>
+          <span class="save-status" id="save-status">تم الحفظ ✓</span>
+        </div>
+      </section>
+
+      <!-- CALENDAR -->
+      <section class="tab-panel hidden" id="tab-calendar">
+        <h2>التقويم الدراسي</h2>
+        <p class="panel-sub">
+          الأيام الخضراء فيها نشاط مسجّل. اضغط على أي يوم للانتقال إليه.
+        </p>
+        <div id="calendar-container"></div>
+      </section>
+
+      <!-- STATS -->
+      <section class="tab-panel hidden" id="tab-stats">
+        <h2>إحصائيات التقدم</h2>
+        <p class="panel-sub">
+          نظرة سريعة على التزامك منذ بداية الاستعمال.
+        </p>
+
+        <div class="progress-wrap">
+          <svg width="96" height="96" viewBox="0 0 96 96" class="progress-ring">
+            <circle
+              cx="48"
+              cy="48"
+              r="42"
+              fill="none"
+              stroke="#2a343c"
+              stroke-width="10"
+            />
+            <circle
+              id="progress-circle"
+              cx="48"
+              cy="48"
+              r="42"
+              fill="none"
+              stroke="#d7a63c"
+              stroke-width="10"
+              stroke-linecap="round"
+              transform="rotate(-90 48 48)"
+            />
+          </svg>
+
+          <div class="progress-text">
+            <div class="big" id="progress-pct">0%</div>
+            <div class="small">
+              نسبة الأيام التي باشرت فيها الاستعداد
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="num" id="stat-remaining">—</div>
+            <div class="lbl">يوم متبقٍ للامتحان</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="num" id="stat-active">—</div>
+            <div class="lbl">يوم فيه نشاط مسجّل</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="num" id="stat-tasks">—</div>
+            <div class="lbl">مهمة أُنجزت إجمالاً</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="num" id="stat-streak">—</div>
+            <div class="lbl">أطول سلسلة أيام متتالية</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="num" id="stat-current-streak">—</div>
+            <div class="lbl">سلسلتك الحالية المستمرة</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="num" id="stat-missed">—</div>
+            <div class="lbl">يوم فائت بلا نشاط</div>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <h3 class="section-title">آخر 14 يوماً</h3>
+          <div class="bar-chart" id="bar-chart"></div>
+        </div>
+
+        <div class="section-block">
+          <h3 class="section-title">التزامك حسب المادة</h3>
+          <div id="subject-stats"></div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="tab-panel hidden" id="tab-settings">
+        <h2>الإعدادات</h2>
+        <p class="panel-sub">
+          خصّص قائمة المواد التي تظهر تلقائياً كل يوم.
+        </p>
+
+        <div class="settings-block">
+          <h3>مظهر الموقع</h3>
+          <p class="panel-sub" style="margin-bottom:10px;">
+            اختر لون التمييز الخاص بك.
+          </p>
+
+          <div class="swatch-row" id="swatch-row"></div>
+
+          <div class="field" style="margin-top:10px;">
+            <label>أو اختر لوناً مخصصاً</label>
+            <input
+              type="color"
+              id="custom-color"
+              value="#d7a63c"
+              style="height:42px; padding:4px;"
+            >
+          </div>
+
+          <p class="panel-sub" style="margin:18px 0 10px;">
+            خلفية شخصية (صورة من هاتفك)
+          </p>
+
+          <div class="add-task-row">
+            <input
+              type="file"
+              id="bg-photo-input"
+              accept="image/*"
+              style="flex:1;"
+            >
+            <button id="btn-remove-bg">إزالة</button>
+          </div>
+
+          <p class="panel-sub" id="bg-status" style="margin-top:8px;"></p>
+        </div>
+
+        <div class="settings-block">
+          <h3>معلومات شخصية</h3>
+
+          <div class="field">
+            <label for="in-school">اسم الثانوية</label>
+            <input
+              type="text"
+              id="in-school"
+              placeholder="مثال: ثانوية ابن خلدون"
+            >
+          </div>
+        </div>
+
+        <div class="settings-block">
+          <h3>المواد الافتراضية</h3>
+
+          <div id="subjects-list"></div>
+
+          <div class="add-task-row">
+            <input
+              id="new-subject-input"
+              type="text"
+              placeholder="أضف مادة جديدة..."
+            >
+            <button id="btn-add-subject">إضافة</button>
+          </div>
+        </div>
+
+        <div class="settings-block">
+          <h3>تذكير يومي</h3>
+
+          <p class="panel-sub" style="margin-bottom:10px;">
+            هذا الموقع نفسه لا يقدر يبعثلك تنبيهاً وأنت خارج منه — هذا قيد
+            تقني في كل المواقع من هذا النوع، مش خاص بيه فقط. أفضل حل:
+            اطلب من Claude في المحادثة أن يضبط لك منبّهاً حقيقياً على هاتفك
+            في وقت ثابت كل يوم للمذاكرة.
+          </p>
+        </div>
+
+        <div class="settings-block">
+          <h3>الحساب</h3>
+
+          <button class="btn btn-danger" id="btn-logout-2">
+            تسجيل الخروج من هذا الحساب
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</div>
+
 <script>
-/* =========================================================
-   رفيق البكالوريا 2027
-   JavaScript — الجزء 2/3
-   ========================================================= */
+(function(){
+  "use strict";
 
-(() => {
-  'use strict';
+  var EXAM_DATE = new Date(2027, 5, 13, 8, 30, 0);
 
-  /* ---------- الثوابت ---------- */
-
-  const EXAM_DATE = new Date('2027-06-13T08:30:00');
-
-  const DEFAULT_SUBJECTS = [
-    'الرياضيات',
-    'الفيزياء',
-    'العلوم الطبيعية',
-    'اللغة العربية',
-    'اللغة الفرنسية',
-    'اللغة الإنجليزية',
-    'الفلسفة',
-    'التاريخ والجغرافيا',
-    'التربية الإسلامية'
+  var DEFAULT_SUBJECTS = [
+    "الرياضيات",
+    "الفيزياء",
+    "العلوم الطبيعية",
+    "اللغة العربية",
+    "اللغة الفرنسية",
+    "اللغة الإنجليزية",
+    "الفلسفة",
+    "التاريخ والجغرافيا",
+    "التربية الإسلامية"
   ];
 
-  const WEEKDAYS = [
-    'الأحد',
-    'الإثنين',
-    'الثلاثاء',
-    'الأربعاء',
-    'الخميس',
-    'الجمعة',
-    'السبت'
+  var WEEKDAYS = [
+    "أحد",
+    "اثنين",
+    "ثلاثاء",
+    "أربعاء",
+    "خميس",
+    "جمعة",
+    "سبت"
   ];
 
-  const MONTHS = [
-    'جانفي',
-    'فيفري',
-    'مارس',
-    'أفريل',
-    'ماي',
-    'جوان',
-    'جويلية',
-    'أوت',
-    'سبتمبر',
-    'أكتوبر',
-    'نوفمبر',
-    'ديسمبر'
+  var MONTHS = [
+    "جانفي",
+    "فيفري",
+    "مارس",
+    "أفريل",
+    "ماي",
+    "جوان",
+    "جويلية",
+    "أوت",
+    "سبتمبر",
+    "أكتوبر",
+    "نوفمبر",
+    "ديسمبر"
   ];
 
-  const MOTIVATIONS = [
-    'خطوة صغيرة اليوم أفضل من ندم كبير غداً.',
-    'لا تحتاج أن تكون مثالياً؛ تحتاج أن تستمر.',
-    'كل مسألة تحلها اليوم تجعل امتحان الغد أسهل.',
-    'الاستمرارية أقوى من الحماس.',
-    'ساعة مركزة خير من خمس ساعات مشتتة.',
-    'لا تقارن بدايتك بمنتصف طريق شخص آخر.',
-    'البكالوريا تُبنى يوماً بعد يوم.',
-    'إذا كان الطريق طويلاً، فابدأ بالخطوة التالية فقط.',
-    'افهم، ثم طبّق، ثم راجع.',
-    'هدفك ليس أن تدرس كثيراً؛ هدفك أن تتقدم.'
+  var ACCENT_PRESETS = [
+    {
+      name:"ذهبي",
+      accent:"#d7a63c",
+      dim:"#8a6a2a",
+      text:"#1a1305"
+    },
+    {
+      name:"بنفسجي",
+      accent:"#9b6fe0",
+      dim:"#5b4a8a",
+      text:"#1c1330"
+    },
+    {
+      name:"أزرق",
+      accent:"#4f8fd9",
+      dim:"#355f8f",
+      text:"#0a1a26"
+    },
+    {
+      name:"أخضر مائي",
+      accent:"#3fae8c",
+      dim:"#2a6f5a",
+      text:"#062018"
+    },
+    {
+      name:"أحمر ترابي",
+      accent:"#c96a52",
+      dim:"#7a3f30",
+      text:"#2a0f08"
+    }
   ];
 
-  const ACCENTS = [
-    '#d7a63c',
-    '#5da9a0',
-    '#6f9bc8',
-    '#9c7ac2',
-    '#c77777',
-    '#7ea86b',
-    '#d48a4d'
+  var DEFAULT_THEME = ACCENT_PRESETS[0];
+
+  var MOTIVATIONS = [
+    "خطوة صغيرة اليوم أفضل من لا خطوة.",
+    "التركيز 25 دقيقة بلا هاتف يساوي ساعة مشتتة.",
+    "من راجع اليوم، لن يندم يوم النتائج.",
+    "البكالوريا امتحان في المعرفة، لا في الحظ — استمر.",
+    "أعد شرح الدرس بصوت عالٍ، هذا أقوى من القراءة الصامتة.",
+    "غداً أسهل قليلاً مما كان اليوم، إن واظبت.",
+    "لا تقارن تقدمك بغيرك، قارنه بأمسك فقط.",
+    "استراحة 5 دقائق كل 25 دقيقة تجعل المذاكرة أثبت.",
+    "التمرين على أسئلة الامتحانات السابقة أهم من إعادة قراءة الدرس.",
+    "النوم الكافي جزء من المذاكرة، لا عدو لها.",
+    "ما لا تفهمه اليوم، اسأل عنه غداً — لا تؤجله للمراجعة الأخيرة.",
+    "كل مادة تراجعها الآن، هي نقطة أقل قلقاً في يوم الامتحان."
   ];
 
-  /* ---------- حالة التطبيق ---------- */
+  function hashDateKey(k){
+    var h = 0;
 
-  let state = {
+    for(var i=0; i<k.length; i++){
+      h = ((h<<5)-h) + k.charCodeAt(i);
+      h |= 0;
+    }
+
+    return Math.abs(h);
+  }
+
+  function darkenHex(hex, amount){
+    var n = parseInt(hex.replace("#",""),16);
+
+    var r = Math.max(
+      0,
+      ((n>>16)&255) - amount
+    );
+
+    var g = Math.max(
+      0,
+      ((n>>8)&255) - amount
+    );
+
+    var b = Math.max(
+      0,
+      (n&255) - amount
+    );
+
+    return "#" + [
+      r,
+      g,
+      b
+    ].map(function(v){
+      return v.toString(16).padStart(2,"0");
+    }).join("");
+  }
+
+  function textColorFor(hex){
+    var n = parseInt(hex.replace("#",""),16);
+
+    var r = (n>>16)&255;
+    var g = (n>>8)&255;
+    var b = n&255;
+
+    var lum =
+      (0.299*r) +
+      (0.587*g) +
+      (0.114*b);
+
+    return lum > 150 ? "#1a1305" : "#ffffff";
+  }
+
+  function applyTheme(theme){
+    var t = theme || DEFAULT_THEME;
+
+    document.documentElement.style.setProperty(
+      "--accent",
+      t.accent
+    );
+
+    document.documentElement.style.setProperty(
+      "--accent-dim",
+      t.dim
+    );
+
+    document.documentElement.style.setProperty(
+      "--accent-text",
+      t.text
+    );
+  }
+
+  function applyBackground(dataUrl){
+    if(dataUrl){
+      document.body.style.backgroundImage =
+        "linear-gradient(180deg, rgba(18,24,29,.87), rgba(18,24,29,.93)), url('"
+        + dataUrl +
+        "')";
+
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundAttachment = "fixed";
+    }else{
+      document.body.style.backgroundImage = "";
+    }
+  }
+
+  var state = {
     profile: null,
     profileKey: null,
-    selectedDate: dateKey(new Date())
+    selectedDate: null,
+    currentEntry: null,
+    currentDateKey: null,
+    saveTimer: null,
+    dirty: false
   };
 
-  let memoryStorage = {};
-  let storageMode = 'memory';
-  let saveTimer = null;
-
-  /* ---------- عناصر DOM ---------- */
-
-  const $ = id => document.getElementById(id);
-
-  const loginScreen = $('screen-login');
-  const dashboardScreen = $('screen-dashboard');
-
-  /* ---------- أدوات عامة ---------- */
-
-  function pad(n) {
-    return String(n).padStart(2, '0');
+  function pad(n){
+    return n < 10 ? "0"+n : ""+n;
   }
 
-  function dateKey(date) {
-    const d = new Date(date);
-
-    return [
-      d.getFullYear(),
-      pad(d.getMonth() + 1),
-      pad(d.getDate())
-    ].join('-');
+  function dateKey(d){
+    return d.getFullYear() +
+      "-" +
+      pad(d.getMonth()+1) +
+      "-" +
+      pad(d.getDate());
   }
 
-  function parseDate(key) {
-    const [y, m, d] = key.split('-').map(Number);
-    return new Date(y, m - 1, d);
+  function sameDay(a,b){
+    return a.getFullYear() === b.getFullYear() &&
+      a.getMonth() === b.getMonth() &&
+      a.getDate() === b.getDate();
   }
 
-  function startOfDay(date) {
-    const d = new Date(date);
-    d.setHours(0, 0, 0, 0);
+  function todayMidnight(){
+    var d = new Date();
+    d.setHours(0,0,0,0);
     return d;
   }
 
-  function addDays(date, amount) {
-    const d = new Date(date);
-    d.setDate(d.getDate() + amount);
-    return d;
-  }
-
-  function daysBetween(a, b) {
-    const aa = startOfDay(a).getTime();
-    const bb = startOfDay(b).getTime();
-
-    return Math.round((bb - aa) / 86400000);
-  }
-
-  function escapeHTML(value) {
-    return String(value ?? '')
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
-
-  function showMessage(text, type = 'ok') {
-    const box = $('login-msg');
-
-    if (!box) return;
-
-    box.textContent = text;
-    box.className = `login-msg show ${type}`;
-
-    clearTimeout(showMessage.timer);
-
-    showMessage.timer = setTimeout(() => {
-      box.className = 'login-msg';
-    }, 3500);
-  }
-
-  function initials(name) {
-    const clean = String(name || '').trim();
-
-    if (!clean) return '؟';
-
-    const chars = [...clean];
-
-    if (chars.length === 1) return chars[0];
-
-    return chars.slice(0, 2).join('');
-  }
-
-  function formatDateArabic(key) {
-    const d = parseDate(key);
-
-    return {
-      day: d.getDate(),
-      month: MONTHS[d.getMonth()],
-      year: d.getFullYear(),
-      weekday: WEEKDAYS[d.getDay()]
-    };
-  }
-
-  /* ---------- التخزين ---------- */
-
-  /*
-    الأولوية:
-    1. window.storage إن كان متاحاً.
-    2. localStorage في المتصفح العادي.
-    3. ذاكرة مؤقتة كحل أخير.
-  */
-
-  const hasWindowStorage =
-    typeof window !== 'undefined' &&
-    window.storage &&
-    typeof window.storage.get === 'function' &&
-    typeof window.storage.set === 'function';
-
-  let localStorageAvailable = false;
-
-  try {
-    const testKey = '__bac_storage_test__';
-
-    localStorage.setItem(testKey, '1');
-    localStorage.removeItem(testKey);
-
-    localStorageAvailable = true;
-  } catch (e) {
-    localStorageAvailable = false;
-  }
-
-  if (hasWindowStorage) {
-    storageMode = 'window';
-  } else if (localStorageAvailable) {
-    storageMode = 'local';
-  } else {
-    storageMode = 'memory';
-  }
-
-  async function storageGet(key) {
-    try {
-      if (storageMode === 'window') {
-        const result = await window.storage.get(key);
-
-        if (!result) return null;
-
-        if (typeof result === 'string') {
-          return result;
-        }
-
-        if ('value' in result) {
-          return result.value;
-        }
-
-        return null;
-      }
-
-      if (storageMode === 'local') {
-        return localStorage.getItem(key);
-      }
-
-      return memoryStorage[key] ?? null;
-
-    } catch (error) {
-      console.warn('Storage get error:', error);
-
-      try {
-        return localStorage.getItem(key);
-      } catch (e) {
-        return memoryStorage[key] ?? null;
-      }
-    }
-  }
-
-  async function storageSet(key, value) {
-    try {
-      if (storageMode === 'window') {
-        await window.storage.set(key, value);
-        return true;
-      }
-
-      if (storageMode === 'local') {
-        localStorage.setItem(key, value);
-        return true;
-      }
-
-      memoryStorage[key] = value;
-      return true;
-
-    } catch (error) {
-      console.warn('Storage set error:', error);
-
-      try {
-        localStorage.setItem(key, value);
-        return true;
-      } catch (e) {
-        memoryStorage[key] = value;
-        return false;
-      }
-    }
-  }
-
-  async function storageDelete(key) {
-    try {
-      if (storageMode === 'window') {
-        if (typeof window.storage.delete === 'function') {
-          await window.storage.delete(key);
-        }
-        return true;
-      }
-
-      if (storageMode === 'local') {
-        localStorage.removeItem(key);
-        return true;
-      }
-
-      delete memoryStorage[key];
-      return true;
-
-    } catch (error) {
-      try {
-        localStorage.removeItem(key);
-      } catch (e) {}
-
-      delete memoryStorage[key];
-
-      return false;
-    }
-  }
-
-  /* ---------- حماية مفتاح الحساب ---------- */
-
-  /*
-    لا نخزّن PIN نفسه داخل اسم المفتاح.
-    هذه ليست حماية أمنية كاملة، لكنها أفضل من:
-    username_pin
-  */
-
-  function simpleHash(text) {
-    let hash = 2166136261;
-
-    for (let i = 0; i < text.length; i++) {
-      hash ^= text.charCodeAt(i);
-      hash +=
-        (hash << 1) +
-        (hash << 4) +
-        (hash << 7) +
-        (hash << 8) +
-        (hash << 24);
-    }
-
-    return (hash >>> 0).toString(16);
-  }
-
-  function normalizeUsername(username) {
-    return String(username || '')
+  function sanitizeKeyPart(s){
+    return (s||"")
+      .toString()
       .trim()
       .toLowerCase()
-      .replace(/\s+/g, '_');
+      .replace(
+        /[^a-z0-9\u0600-\u06FF_-]/g,
+        ""
+      );
   }
 
-  function makeProfileKey(username, pin) {
-    const normalized = normalizeUsername(username);
-
-    return `bac2027_${simpleHash(
-      `${normalized}|${pin}|bac2027`
-    )}`;
-  }
-
-  /* ---------- بنية الحساب ---------- */
-
-  function createProfile(username) {
-    const today = dateKey(new Date());
-
-    return {
-      version: 2,
-
-      username,
-
-      createdAt: today,
-
-      school: '',
-
-      subjects: [...DEFAULT_SUBJECTS],
-
-      accent: ACCENTS[0],
-
-      background: '',
-
-      reminder: '',
-
-      entries: {},
-
-      settings: {
-        lastSaved: null
-      }
-    };
-  }
-
-  function normalizeProfile(profile, username) {
-    const p = profile && typeof profile === 'object'
-      ? profile
-      : createProfile(username);
-
-    p.version = 2;
-    p.username = p.username || username;
-    p.createdAt = p.createdAt || dateKey(new Date());
-
-    if (!Array.isArray(p.subjects) || !p.subjects.length) {
-      p.subjects = [...DEFAULT_SUBJECTS];
-    }
-
-    p.subjects = [...new Set(
-      p.subjects
-        .map(s => String(s).trim())
-        .filter(Boolean)
-    )];
-
-    if (!p.entries || typeof p.entries !== 'object') {
-      p.entries = {};
-    }
-
-    p.school = String(p.school || '');
-    p.accent = p.accent || ACCENTS[0];
-    p.background = p.background || '';
-    p.reminder = p.reminder || '';
-
-    if (!p.settings || typeof p.settings !== 'object') {
-      p.settings = {};
-    }
-
-    return p;
-  }
-
-  function createDailyEntry(key) {
-    const tasks = state.profile.subjects.map(subject => ({
-      id: createTaskId(),
-      text: `مراجعة ${subject}`,
-      subject,
-      done: false,
-      system: true
-    }));
-
-    return {
-      date: key,
-      tasks,
-      journal: '',
-      createdAt: Date.now(),
-      updatedAt: Date.now()
-    };
-  }
-
-  function getEntry(key) {
-    if (!state.profile.entries[key]) {
-      state.profile.entries[key] = createDailyEntry(key);
-    }
-
-    const entry = state.profile.entries[key];
-
-    if (!Array.isArray(entry.tasks)) {
-      entry.tasks = [];
-    }
-
-    if (typeof entry.journal !== 'string') {
-      entry.journal = '';
-    }
-
-    return entry;
-  }
-
-  function createTaskId() {
-    return (
+  function uid(){
+    return "t" +
       Date.now().toString(36) +
-      Math.random().toString(36).slice(2, 8)
+      Math.random().toString(36).slice(2,7);
+  }
+
+  function showMsg(el, text, kind){
+    el.textContent = text;
+    el.className = "login-msg show " + kind;
+  }
+
+  // ---------- storage ----------
+  // حفظ دائم: localStorage هو الأساس لأنه يبقى
+  // بعد إغلاق الصفحة وإعادة فتحها.
+  // نستخدم window.storage فقط كخيار احتياطي
+  // داخل بيئات المعاينة التي توفره.
+
+  var localStorageAvailable = false;
+
+  var claudeStorageAvailable =
+    !!(
+      window.storage &&
+      typeof window.storage.get === "function"
     );
+
+  var lastStorageError = "";
+
+  try{
+    var __testKey = "__bac_storage_test__";
+
+    window.localStorage.setItem(
+      __testKey,
+      "1"
+    );
+
+    window.localStorage.removeItem(
+      __testKey
+    );
+
+    localStorageAvailable = true;
+  }catch(e){}
+
+  var persistenceAvailable =
+    localStorageAvailable ||
+    claudeStorageAvailable;
+
+  var storageBackend =
+    localStorageAvailable ?
+    {
+      get: async function(key){
+        try{
+          var value =
+            window.localStorage.getItem(key);
+
+          return value === null
+            ? null
+            : {
+                key:key,
+                value:value
+              };
+        }catch(e){
+          lastStorageError =
+            e && e.message
+              ? e.message
+              : String(e);
+
+          return null;
+        }
+      },
+
+      set: async function(key, value){
+        try{
+          window.localStorage.setItem(
+            key,
+            value
+          );
+
+          return {
+            key:key,
+            value:value
+          };
+        }catch(e){
+          lastStorageError =
+            e && e.message
+              ? e.message
+              : String(e);
+
+          throw e;
+        }
+      }
+    }
+    :
+    (
+      claudeStorageAvailable
+        ? window.storage
+        : null
+    );
+
+  async function loadIndex(){
+    try{
+      var r =
+        await storageBackend.get(
+          "bac_profiles_index"
+        );
+
+      return r
+        ? JSON.parse(r.value)
+        : [];
+    }catch(e){
+      lastStorageError =
+        e && e.message
+          ? e.message
+          : String(e);
+
+      return [];
+    }
   }
 
-  /* ---------- التحقق من التواريخ ---------- */
-
-  function getStartDate() {
-    return parseDate(state.profile.createdAt);
+  async function saveIndex(list){
+    try{
+      await storageBackend.set(
+        "bac_profiles_index",
+        JSON.stringify(list)
+      );
+    }catch(e){
+      lastStorageError =
+        e && e.message
+          ? e.message
+          : String(e);
+    }
   }
 
-  function getToday() {
-    return startOfDay(new Date());
+  async function loadProfile(key){
+    try{
+      var r =
+        await storageBackend.get(key);
+
+      return r
+        ? JSON.parse(r.value)
+        : null;
+    }catch(e){
+      lastStorageError =
+        e && e.message
+          ? e.message
+          : String(e);
+
+      return null;
+    }
   }
 
-  function getExamDay() {
-    return startOfDay(EXAM_DATE);
+  async function saveProfile(key, profile){
+    try{
+      await storageBackend.set(
+        key,
+        JSON.stringify(profile)
+      );
+
+      return true;
+    }catch(e){
+      lastStorageError =
+        e && e.message
+          ? e.message
+          : String(e);
+
+      return false;
+    }
   }
 
-  function isBeforeStart(key) {
-    return parseDate(key) < getStartDate();
-  }
-
-  function isAfterExam(key) {
-    return parseDate(key) > getExamDay();
-  }
-
-  function isToday(key) {
-    return key === dateKey(new Date());
-  }
-
-  /* ---------- حفظ الحساب ---------- */
-
-  async function saveProfile(showStatus = false) {
-    if (!state.profile || !state.profileKey) {
+  async function persistNow(){
+    if(
+      !state.profile ||
+      !state.profileKey
+    ){
       return false;
     }
 
-    state.profile.settings.lastSaved = Date.now();
+    var ok =
+      await saveProfile(
+        state.profileKey,
+        state.profile
+      );
 
-    const ok = await storageSet(
-      state.profileKey,
-      JSON.stringify(state.profile)
-    );
-
-    if (showStatus) {
-      const status = $('save-status');
-
-      if (status) {
-        status.textContent = ok
-          ? 'تم الحفظ ✓'
-          : 'تعذر الحفظ';
-
-        status.classList.add('show');
-
-        clearTimeout(status.timer);
-
-        status.timer = setTimeout(() => {
-          status.classList.remove('show');
-        }, 2200);
-      }
+    if(ok){
+      state.dirty = false;
     }
 
     return ok;
   }
 
-  function autoSave(delay = 350) {
-    clearTimeout(saveTimer);
+  function scheduleSave(){
+    state.dirty = true;
 
-    saveTimer = setTimeout(() => {
-      saveProfile(false);
-    }, delay);
+    clearTimeout(
+      state.saveTimer
+    );
+
+    state.saveTimer =
+      setTimeout(
+        function(){
+          persistNow();
+        },
+        500
+      );
   }
 
-  /* ---------- الدخول ---------- */
-
-  async function login() {
-    const usernameInput = $('in-username');
-    const pinInput = $('in-pin');
-
-    const username = String(
-      usernameInput?.value || ''
-    ).trim();
-
-    const pin = String(
-      pinInput?.value || ''
-    ).trim();
-
-    if (username.length < 2) {
-      showMessage(
-        'اكتب اسم مستخدم مكوّناً من حرفين على الأقل.',
-        'err'
-      );
-
-      usernameInput?.focus();
+  function addMissingSubjectsToEntry(entry){
+    if(
+      !entry ||
+      !Array.isArray(entry.tasks)
+    ){
       return;
     }
 
-    if (!/^\d{4}$/.test(pin)) {
-      showMessage(
-        'رمز الدخول يجب أن يتكون من 4 أرقام بالضبط.',
-        'err'
-      );
+    var labels = {};
 
-      pinInput?.focus();
-      return;
-    }
+    entry.tasks.forEach(function(t){
+      labels[t.label] = true;
+    });
 
-    const profileKey = makeProfileKey(username, pin);
-
-    let raw = await storageGet(profileKey);
-
-    let profile;
-
-    if (raw) {
-      try {
-        profile = normalizeProfile(
-          JSON.parse(raw),
-          username
-        );
-      } catch (error) {
-        console.error(error);
-
-        showMessage(
-          'تعذر قراءة بيانات الحساب. قد تكون البيانات تالفة.',
-          'err'
-        );
-
-        return;
+    state.profile.subjects.forEach(function(s){
+      if(!labels[s]){
+        entry.tasks.push({
+          id:uid(),
+          label:s,
+          done:false
+        });
       }
-    } else {
-      profile = createProfile(username);
-
-      await storageSet(
-        profileKey,
-        JSON.stringify(profile)
-      );
-
-      showMessage(
-        'تم إنشاء حسابك بنجاح.',
-        'ok'
-      );
-    }
-
-    state.profile = profile;
-    state.profileKey = profileKey;
-
-    const todayKey = dateKey(new Date());
-
-    if (
-      isBeforeStart(todayKey) ||
-      isAfterExam(todayKey)
-    ) {
-      state.selectedDate = profile.createdAt;
-    } else {
-      state.selectedDate = todayKey;
-    }
-
-    applyProfileAppearance();
-
-    loginScreen.classList.add('hidden');
-    dashboardScreen.classList.remove('hidden');
-
-    renderDashboard();
-
-    autoSave();
+    });
   }
-
-  function logout() {
-    clearTimeout(saveTimer);
-
-    state.profile = null;
-    state.profileKey = null;
-
-    dashboardScreen.classList.add('hidden');
-    loginScreen.classList.remove('hidden');
-
-    if ($('in-pin')) {
-      $('in-pin').value = '';
-    }
-
-    if ($('in-username')) {
-      $('in-username').focus();
-    }
-
-    updateKnownUsers();
-  }
-
-  /* ---------- الحسابات المعروفة ---------- */
-
-  async function updateKnownUsers() {
-    /*
-      localStorage لا يسمح لنا بسهولة بالحصول على مفاتيح
-      window.storage، لذلك هذه القائمة تظهر فقط في localStorage.
-    */
-
-    const wrap = $('known-users-wrap');
-    const list = $('known-users-list');
-
-    if (!wrap || !list) return;
-
-    list.innerHTML = '';
-
-    if (storageMode !== 'local') {
-      wrap.style.display = 'none';
-      return;
-    }
-
-    const users = [];
-
-    try {
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-
-        if (!key || !key.startsWith('bac2027_')) {
-          continue;
-        }
-
-        const raw = localStorage.getItem(key);
-
-        try {
-          const profile = JSON.parse(raw);
-
-          if (profile?.username) {
-            users.push(profile.username);
-          }
-        } catch (e) {}
-      }
-    } catch (error) {
-      return;
-    }
-
-    const uniqueUsers = [...new Set(users)];
-
-    if (!uniqueUsers.length) {
-      wrap.style.display = 'none';
-      return;
-    }
-
-    wrap.style.display = 'block';
-
-    uniqueUsers.forEach(username => {
-      const button = document.createElement('button');
-
-      button.className = 'chip';
-      button.type = 'button';
-      button.textContent = username;
-
-      button.addEventListener('click', () => {
-        $('in-username').value = username;
-        $('in-pin').focus();
+    if(!entry || !Array.isArray(entry.tasks)) return;
+    var labels = {};
+    entry.tasks.forEach(function(t){ labels[t.label] = true; });
+    state.profile.subjects.forEach(function(s){
+      if(!labels[s]) entry.tasks.push({
+        id:uid(),
+        label:s,
+        done:false
       });
-
-      list.appendChild(button);
     });
   }
 
-  /* ---------- العد التنازلي ---------- */
+  // ---------- login screen ----------
+  async function refreshKnownUsers(){
+    var list = await loadIndex();
+    var wrap = document.getElementById("known-users-wrap");
+    var box = document.getElementById("known-users-list");
 
-  function updateCountdown() {
-    const now = new Date();
+    box.innerHTML = "";
 
-    let diff = EXAM_DATE.getTime() - now.getTime();
-
-    if (diff < 0) {
-      diff = 0;
+    if(!list.length){
+      wrap.style.display = "none";
+      return;
     }
 
-    const totalSeconds = Math.floor(diff / 1000);
+    wrap.style.display = "block";
 
-    const days = Math.floor(totalSeconds / 86400);
+    list.forEach(function(u){
+      var chip = document.createElement("span");
+      chip.className = "chip";
+      chip.textContent = u.displayName;
+      chip.style.cursor = "pointer";
 
-    const hours = Math.floor(
-      (totalSeconds % 86400) / 3600
-    );
+      chip.addEventListener("click", function(){
+        document.getElementById("in-username").value = u.displayName;
+        document.getElementById("in-pin").focus();
+      });
 
-    const minutes = Math.floor(
-      (totalSeconds % 3600) / 60
-    );
-
-    const seconds = totalSeconds % 60;
-
-    const daysEl = $('cd-days');
-
-    if (daysEl) {
-      daysEl.innerHTML =
-        `${days}<span>يوم</span>`;
-    }
-
-    if ($('cd-hours')) {
-      $('cd-hours').textContent = pad(hours);
-    }
-
-    if ($('cd-mins')) {
-      $('cd-mins').textContent = pad(minutes);
-    }
-
-    if ($('cd-secs')) {
-      $('cd-secs').textContent = pad(seconds);
-    }
-
-    if ($('mini-days')) {
-      $('mini-days').textContent = days;
-    }
+      box.appendChild(chip);
+    });
   }
 
-  /* ---------- التنقل بين التبويبات ---------- */
+  async function handleLogin(){
+    var msgEl = document.getElementById("login-msg");
 
-  function openTab(tabName) {
-    document
-      .querySelectorAll('.tab-btn')
-      .forEach(button => {
-        button.classList.toggle(
-          'active',
-          button.dataset.tab === tabName
-        );
-      });
+    var uname =
+      document.getElementById("in-username").value.trim();
 
-    document
-      .querySelectorAll('.tab-panel')
-      .forEach(panel => {
-        panel.classList.toggle(
-          'hidden',
-          panel.id !== `tab-${tabName}`
-        );
-      });
+    var pin =
+      document.getElementById("in-pin").value.trim();
 
-    if (tabName === 'today') {
-      renderToday();
+    if(!uname){
+      showMsg(
+        msgEl,
+        "أدخل اسم مستخدم أولاً.",
+        "err"
+      );
+      return;
     }
 
-    if (tabName === 'calendar') {
+    if(!/^[0-9]{4}$/.test(pin)){
+      showMsg(
+        msgEl,
+        "رمز الدخول يجب أن يكون من 4 أرقام بالضبط.",
+        "err"
+      );
+      return;
+    }
+
+    var keySafe = sanitizeKeyPart(uname);
+
+    if(!keySafe){
+      showMsg(
+        msgEl,
+        "الاسم يحتوي على رموز غير مدعومة، جرّب اسماً أبسط.",
+        "err"
+      );
+      return;
+    }
+
+    var key =
+      "bacuser_" +
+      keySafe +
+      "_" +
+      pin;
+
+    var existing =
+      await loadProfile(key);
+
+    if(existing){
+      state.profile = existing;
+      state.profileKey = key;
+      enterDashboard();
+      return;
+    }
+
+    var index =
+      await loadIndex();
+
+    var usernameTaken =
+      index.some(function(u){
+        return u.usernameSafe === keySafe;
+      });
+
+    if(usernameTaken){
+      showMsg(
+        msgEl,
+        "اسم المستخدم موجود لكن رمز الدخول غير صحيح.",
+        "err"
+      );
+      return;
+    }
+
+    var newProfile = {
+      displayName: uname,
+      createdAt: dateKey(todayMidnight()),
+      subjects: DEFAULT_SUBJECTS.slice(),
+      entries: {},
+      theme: DEFAULT_THEME,
+      bgImage: null,
+      schoolName: ""
+    };
+
+    var created =
+      await saveProfile(
+        key,
+        newProfile
+      );
+
+    if(!created){
+      showMsg(
+        msgEl,
+        "تعذّر حفظ الحساب. جرّب مرة أخرى.",
+        "err"
+      );
+      return;
+    }
+
+    index.push({
+      usernameSafe: keySafe,
+      displayName: uname
+    });
+
+    await saveIndex(index);
+
+    state.profile = newProfile;
+    state.profileKey = key;
+
+    showMsg(
+      msgEl,
+      "تم إنشاء حسابك بنجاح.",
+      "ok"
+    );
+
+    setTimeout(
+      enterDashboard,
+      400
+    );
+  }
+
+  // ---------- countdown ----------
+  function updateCountdown(){
+    var now = new Date();
+    var diff = EXAM_DATE - now;
+
+    if(diff < 0) diff = 0;
+
+    var days =
+      Math.floor(diff / 86400000);
+
+    var hours =
+      Math.floor(
+        (diff % 86400000) /
+        3600000
+      );
+
+    var mins =
+      Math.floor(
+        (diff % 3600000) /
+        60000
+      );
+
+    var secs =
+      Math.floor(
+        (diff % 60000) /
+        1000
+      );
+
+    var cdDays =
+      document.getElementById("cd-days");
+
+    if(cdDays){
+      cdDays.innerHTML =
+        days +
+        "<span>يوم</span>";
+    }
+
+    var ch =
+      document.getElementById("cd-hours");
+
+    if(ch) ch.textContent = pad(hours);
+
+    var cm =
+      document.getElementById("cd-mins");
+
+    if(cm) cm.textContent = pad(mins);
+
+    var cs =
+      document.getElementById("cd-secs");
+
+    if(cs) cs.textContent = pad(secs);
+
+    var md =
+      document.getElementById("mini-days");
+
+    if(md) md.textContent = days;
+  }
+
+  // ---------- dashboard entry ----------
+  function enterDashboard(){
+    document
+      .getElementById("screen-login")
+      .classList.add("hidden");
+
+    document
+      .getElementById("screen-dashboard")
+      .classList.remove("hidden");
+
+    document.getElementById("dash-name")
+      .textContent =
+      state.profile.displayName;
+
+    document.getElementById("dash-avatar")
+      .textContent =
+      state.profile.displayName
+        .charAt(0)
+        .toUpperCase();
+
+    document
+      .querySelector("#screen-dashboard .who .sub")
+      .textContent =
+      state.profile.schoolName
+        ? state.profile.schoolName
+        : "مسار البكالوريا 2027";
+
+    applyTheme(
+      state.profile.theme
+    );
+
+    applyBackground(
+      state.profile.bgImage
+    );
+
+    if(!persistenceAvailable){
+      document
+        .getElementById("no-persist-banner")
+        .classList.remove("hidden");
+    }else{
+      document
+        .getElementById("no-persist-banner")
+        .classList.add("hidden");
+    }
+
+    state.selectedDate =
+      todayMidnight();
+
+    renderToday();
+    renderSettings();
+  }
+
+  function logout(){
+    state.profile = null;
+    state.profileKey = null;
+
+    applyTheme(
+      DEFAULT_THEME
+    );
+
+    applyBackground(null);
+
+    document
+      .getElementById("screen-dashboard")
+      .classList.add("hidden");
+
+    document
+      .getElementById("screen-login")
+      .classList.remove("hidden");
+
+    document.getElementById("in-pin")
+      .value = "";
+
+    document.getElementById("login-msg")
+      .className = "login-msg";
+
+    refreshKnownUsers();
+  }
+
+  // ---------- tabs ----------
+  function switchTab(name){
+    document
+      .querySelectorAll(".tab-btn")
+      .forEach(function(b){
+        b.classList.toggle(
+          "active",
+          b.dataset.tab === name
+        );
+      });
+
+    document
+      .querySelectorAll(".tab-panel")
+      .forEach(function(p){
+        p.classList.add("hidden");
+      });
+
+    document
+      .getElementById("tab-"+name)
+      .classList.remove("hidden");
+
+    if(name === "calendar"){
       renderCalendar();
     }
 
-    if (tabName === 'stats') {
+    if(name === "stats"){
       renderStats();
     }
 
-    if (tabName === 'settings') {
+    if(name === "settings"){
       renderSettings();
     }
   }
 
-  /* ---------- عرض لوحة التحكم ---------- */
-
-  function renderDashboard() {
-    if (!state.profile) return;
-
-    $('dash-name').textContent =
-      state.profile.username;
-
-    $('dash-avatar').textContent =
-      initials(state.profile.username);
-
-    renderToday();
-  }
-
-  /* ---------- اليوم ---------- */
-
-  function renderToday() {
-    if (!state.profile) return;
-
-    let key = state.selectedDate;
-
-    if (isBeforeStart(key)) {
-      key = state.profile.createdAt;
-      state.selectedDate = key;
-    }
-
-    if (isAfterExam(key)) {
-      key = dateKey(EXAM_DATE);
-      state.selectedDate = key;
-    }
-
-    const info = formatDateArabic(key);
-
-    $('date-d1').textContent =
-      `${info.weekday}، ${info.day} ${info.month}`;
-
-    $('date-d2').textContent =
-      info.year === 2027
-        ? 'السنة الدراسية 2026–2027'
-        : `السنة ${info.year}`;
-
-    const prev = $('date-prev');
-    const next = $('date-next');
-
-    if (prev) {
-      prev.disabled =
-        parseDate(key) <= getStartDate();
-    }
-
-    if (next) {
-      next.disabled =
-        parseDate(key) >= getExamDay();
-    }
-
-    const entry = getEntry(key);
-
-    renderTasks(entry);
-    renderJournal(entry);
-    renderNudge(entry);
-    renderDailyQuote(key);
-
-    applyProfileAppearance();
-  }
-
-  function renderTasks(entry) {
-    const list = $('task-list');
-
-    if (!list) return;
-
-    list.innerHTML = '';
-
-    if (!entry.tasks.length) {
-      const empty = document.createElement('li');
-
-      empty.style.cssText = `
-        color:var(--text-muted);
-        background:var(--surface);
-        border:1px dashed var(--border);
-        border-radius:var(--radius-sm);
-        padding:18px;
-        text-align:center;
-        font-size:13px;
-      `;
-
-      empty.textContent =
-        'لا توجد مهام لهذا اليوم. أضف مهمتك الأولى.';
-
-      list.appendChild(empty);
-
-      return;
-    }
-
-    entry.tasks.forEach(task => {
-      const li = document.createElement('li');
-
-      li.className =
-        `task-item${task.done ? ' done' : ''}`;
-
-      const check = document.createElement('button');
-
-      check.className = 'check';
-      check.type = 'button';
-      check.setAttribute(
-        'aria-label',
-        task.done
-          ? 'إلغاء إنجاز المهمة'
-          : 'إنجاز المهمة'
-      );
-
-      check.textContent = task.done ? '✓' : '';
-
-      check.addEventListener('click', () => {
-        task.done = !task.done;
-        entry.updatedAt = Date.now();
-
-        renderTasks(entry);
-        renderNudge(entry);
-
-        autoSave();
-      });
-
-      const label = document.createElement('div');
-
-      label.className = 'label';
-      label.textContent = task.text;
-
-      if (task.subject) {
-        const subject = document.createElement('small');
-
-        subject.textContent = ` · ${task.subject}`;
-
-        subject.style.cssText = `
-          color:var(--text-muted);
-          font-size:11px;
-        `;
-
-        label.appendChild(subject);
-      }
-
-      const remove = document.createElement('button');
-
-      remove.className = 'remove';
-      remove.type = 'button';
-      remove.textContent = 'حذف';
-
-      remove.addEventListener('click', () => {
-        const confirmed = confirm(
-          'هل تريد حذف هذه المهمة؟'
-        );
-
-        if (!confirmed) return;
-
-        entry.tasks =
-          entry.tasks.filter(t => t.id !== task.id);
-
-        entry.updatedAt = Date.now();
-
-        renderTasks(entry);
-        renderNudge(entry);
-
-        autoSave();
-      });
-
-      li.appendChild(check);
-      li.appendChild(label);
-      li.appendChild(remove);
-
-      list.appendChild(li);
-    });
-  }
-
-  function renderJournal(entry) {
-    const textarea = $('journal-text');
-
-    if (!textarea) return;
-
-    textarea.value = entry.journal || '';
-
-    textarea.oninput = () => {
-      entry.journal = textarea.value;
-      entry.updatedAt = Date.now();
-
-      autoSave(600);
-    };
-  }
-
-  function renderNudge(entry) {
-    const banner = $('nudge-banner');
-
-    if (!banner) return;
-
-    const hasDone =
-      entry.tasks.some(task => task.done);
-
-    const hasJournal =
-      String(entry.journal || '').trim().length > 0;
-
-    const shouldShow =
-      isToday(state.selectedDate) &&
-      !hasDone &&
-      !hasJournal;
-
-    banner.classList.toggle(
-      'hidden',
-      !shouldShow
-    );
-  }
-
-  function renderDailyQuote(key) {
-    const el = $('daily-quote');
-
-    if (!el) return;
-
-    const d = parseDate(key);
-
-    const index =
-      Math.abs(
-        Math.floor(d.getTime() / 86400000)
-      ) % MOTIVATIONS.length;
-
-    el.textContent =
-      `« ${MOTIVATIONS[index]} »`;
-  }
-
-  /* ---------- إضافة مهمة ---------- */
-
-  function addTask() {
-    const input = $('new-task-input');
-
-    if (!input) return;
-
-    const text = input.value.trim();
-
-    if (!text) {
-      input.focus();
-      return;
-    }
-
-    const entry = getEntry(state.selectedDate);
-
-    entry.tasks.push({
-      id: createTaskId(),
-      text,
-      subject: '',
-      done: false,
-      system: false
-    });
-
-    entry.updatedAt = Date.now();
-
-    input.value = '';
-
-    renderTasks(entry);
-    renderNudge(entry);
-
-    autoSave();
-
-    input.focus();
-  }
-
-  /* ---------- التنقل بين الأيام ---------- */
-
-  function changeDate(amount) {
-    const current = parseDate(state.selectedDate);
-
-    const next = addDays(current, amount);
-
-    if (next < getStartDate()) {
-      return;
-    }
-
-    if (next > getExamDay()) {
-      return;
-    }
-
-    state.selectedDate = dateKey(next);
-
-    renderToday();
-  }
-
-  function goToday() {
-    const today = getToday();
-
-    if (
-      today >= getStartDate() &&
-      today <= getExamDay()
-    ) {
-      state.selectedDate = dateKey(today);
-      renderToday();
-    }
-  }
-
-  /* ---------- التقويم ---------- */
-
-  function renderCalendar() {
-    const container = $('calendar-container');
-
-    if (!container || !state.profile) return;
-
-    container.innerHTML = '';
-
-    const start = getStartDate();
-    const exam = getExamDay();
-
-    let cursor = new Date(
-      start.getFullYear(),
-      start.getMonth(),
-      1
-    );
-
-    while (cursor <= exam) {
-      const year = cursor.getFullYear();
-      const month = cursor.getMonth();
-
-      const block = document.createElement('div');
-
-      block.className = 'month-block';
-
-      const title = document.createElement('h3');
-
-      title.textContent =
-        `${MONTHS[month]} ${year}`;
-
-      block.appendChild(title);
-
-      const grid = document.createElement('div');
-
-      grid.className = 'cal-grid';
-
-      WEEKDAYS.forEach(day => {
-        const head = document.createElement('div');
-
-        head.className = 'cal-head';
-        head.textContent = day.slice(0, 2);
-
-        grid.appendChild(head);
-      });
-
-      const firstDay =
-        new Date(year, month, 1).getDay();
-
-      for (let i = 0; i < firstDay; i++) {
-        const empty = document.createElement('div');
-
-        empty.className =
-          'cal-cell empty';
-
-        grid.appendChild(empty);
-      }
-
-      const daysInMonth =
-        new Date(year, month + 1, 0).getDate();
-
-      for (let day = 1; day <= daysInMonth; day++) {
-        const date = new Date(year, month, day);
-
-        if (date < start || date > exam) {
-          const empty = document.createElement('div');
-
-          empty.className =
-            'cal-cell empty';
-
-          grid.appendChild(empty);
-
-          continue;
-        }
-
-        const key = dateKey(date);
-
-        const cell = document.createElement('button');
-
-        cell.type = 'button';
-        cell.className = 'cal-cell';
-
-        cell.textContent = day;
-
-        const entry =
-          state.profile.entries[key];
-
-        const active =
-          !!entry &&
-          (
-            entry.tasks?.some(t => t.done) ||
-            String(entry.journal || '').trim()
-          );
-
-        if (active) {
-          cell.classList.add('active-day');
-        }
-
-        if (isToday(key)) {
-          cell.classList.add('today');
-        }
-
-        if (key === dateKey(EXAM_DATE)) {
-          cell.classList.add('exam-day');
-        }
-
-        if (
-          date < getToday() &&
-          !active
-        ) {
-          cell.classList.add('missed');
-        }
-
-        cell.addEventListener('click', () => {
-          state.selectedDate = key;
-
-          openTab('today');
-        });
-
-        grid.appendChild(cell);
-      }
-
-      block.appendChild(grid);
-      container.appendChild(block);
-
-      cursor =
-        new Date(year, month + 1, 1);
-    }
-  }
-
-  /* ---------- الإحصائيات ---------- */
-
-  function getAllDates() {
-    const dates = [];
-
-    const start = getStartDate();
-    const today = getToday();
-
-    const end =
-      today < getExamDay()
-        ? today
-        : getExamDay();
-
-    if (end < start) {
-      return dates;
-    }
-
-    let cursor = new Date(start);
-
-    while (cursor <= end) {
-      dates.push(dateKey(cursor));
-      cursor = addDays(cursor, 1);
-    }
-
-    return dates;
-  }
-
-  function isActiveDate(key) {
-    const entry =
-      state.profile.entries[key];
-
-    if (!entry) return false;
-
-    return (
-      entry.tasks?.some(task => task.done) ||
-      String(entry.journal || '').trim().length > 0
-    );
-  }
-
-  function getCompletedTasks() {
-    let count = 0;
-
-    Object.values(
-      state.profile.entries
-    ).forEach(entry => {
-      if (!Array.isArray(entry.tasks)) return;
-
-      count += entry.tasks.filter(
-        task => task.done
-      ).length;
-    });
-
-    return count;
-  }
-
-  function getLongestStreak() {
-    let longest = 0;
-    let current = 0;
-
-    getAllDates().forEach(key => {
-      if (isActiveDate(key)) {
-        current++;
-        longest = Math.max(longest, current);
-      } else {
-        current = 0;
-      }
-    });
-
-    return longest;
-  }
-
-  function getCurrentStreak() {
-    const todayKey = dateKey(new Date());
-
-    let cursor = parseDate(todayKey);
-
-    if (!isActiveDate(todayKey)) {
-      cursor = addDays(cursor, -1);
-    }
-
-    let streak = 0;
-
-    while (cursor >= getStartDate()) {
-      const key = dateKey(cursor);
-
-      if (!isActiveDate(key)) {
-        break;
-      }
-
-      streak++;
-      cursor = addDays(cursor, -1);
-    }
-
-    return streak;
-  }
-
-  function getMissedDays() {
-    return getAllDates()
-      .filter(key =>
-        parseDate(key) < getToday()
-      )
-      .filter(key => !isActiveDate(key))
-      .length;
-  }
-
-  function renderStats() {
-    if (!state.profile) return;
-
-    const allDates = getAllDates();
-
-    const activeDays =
-      allDates.filter(isActiveDate).length;
-
-    const totalDays =
-      Math.max(allDates.length, 1);
-
-    const percent =
-      Math.round(
-        (activeDays / totalDays) * 100
-      );
-
-    const completedTasks =
-      getCompletedTasks();
-
-    const currentStreak =
-      getCurrentStreak();
-
-    const longestStreak =
-      getLongestStreak();
-
-    const missed =
-      getMissedDays();
-
-    $('progress-percent').textContent =
-      `${percent}%`;
-
-    $('stat-active').textContent =
-      activeDays;
-
-    $('stat-tasks').textContent =
-      completedTasks;
-
-    $('stat-streak').textContent =
-      longestStreak;
-
-    $('stat-missed').textContent =
-      missed;
-
-    renderProgressRing(percent);
-    renderActivityChart();
-    renderSubjectStats();
-  }
-
-  function renderProgressRing(percent) {
-    const container =
-      $('progress-ring');
-
-    if (!container) return;
-
-    const radius = 28;
-    const circumference =
-      2 * Math.PI * radius;
-
-    const offset =
-      circumference -
-      (percent / 100) * circumference;
-
-    container.innerHTML = `
-      <svg
-        width="76"
-        height="76"
-        viewBox="0 0 76 76"
-        aria-label="نسبة التقدم ${percent}%"
-      >
-        <circle
-          cx="38"
-          cy="38"
-          r="${radius}"
-          fill="none"
-          stroke="var(--surface-2)"
-          stroke-width="7"
-        ></circle>
-
-        <circle
-          cx="38"
-          cy="38"
-          r="${radius}"
-          fill="none"
-          stroke="var(--gold)"
-          stroke-width="7"
-          stroke-linecap="round"
-          stroke-dasharray="${circumference}"
-          stroke-dashoffset="${offset}"
-          transform="rotate(-90 38 38)"
-        ></circle>
-
-        <text
-          x="38"
-          y="42"
-          text-anchor="middle"
-          fill="var(--text)"
-          font-size="14"
-          font-family="Tajawal"
-          font-weight="800"
-        >${percent}</text>
-      </svg>
-    `;
-  }
-
-  function renderActivityChart() {
-    const chart =
-      $('activity-chart');
-
-    if (!chart) return;
-
-    chart.innerHTML = '';
-
-    const today =
-      getToday();
-
-    const days = [];
-
-    for (let i = 13; i >= 0; i--) {
-      const date =
-        addDays(today, -i);
-
-      const key =
-        dateKey(date);
-
-      const entry =
-        state.profile.entries[key];
-
-      const done =
-        entry?.tasks?.filter(
-          task => task.done
-        ).length || 0;
-
-      days.push({
-        key,
-        done
-      });
-    }
-
-    const max =
-      Math.max(
-        ...days.map(d => d.done),
-        1
-      );
-
-    days.forEach(item => {
-      const col =
-        document.createElement('div');
-
-      col.className =
-        'bar-col';
-
-      if (isToday(item.key)) {
-        col.classList.add('today');
-      }
-
-      const bar =
-        document.createElement('div');
-
-      bar.className = 'bar';
-
-      const height =
-        Math.max(
-          3,
-          Math.round(
-            (item.done / max) * 72
-          )
-        );
-
-      bar.style.height =
-        `${height}px`;
-
-      bar.title =
-        `${item.done} مهمة منجزة`;
-
-      const day =
-        document.createElement('div');
-
-      day.className =
-        'bar-day';
-
-      day.textContent =
-        parseDate(item.key).getDate();
-
-      col.appendChild(bar);
-      col.appendChild(day);
-
-      chart.appendChild(col);
-    });
-  }
-
-  function renderSubjectStats() {
-    const container =
-      $('subject-stats');
-
-    if (!container) return;
-
-    container.innerHTML = '';
-
-    const subjects =
-      state.profile.subjects;
-
-    const totals = {};
-
-    subjects.forEach(subject => {
-      totals[subject] = {
-        total: 0,
-        done: 0
-      };
-    });
-
-    Object.values(
-      state.profile.entries
-    ).forEach(entry => {
-      if (!Array.isArray(entry.tasks)) return;
-
-      entry.tasks.forEach(task => {
-        const subject =
-          task.subject;
-
-        if (!subject) return;
-
-        if (!totals[subject]) {
-          totals[subject] = {
-            total: 0,
-            done: 0
-          };
-        }
-
-        totals[subject].total++;
-
-        if (task.done) {
-          totals[subject].done++;
-        }
-      });
-    });
-
-    subjects.forEach(subject => {
-      const data =
-        totals[subject];
-
-      const percent =
-        data.total
-          ? Math.round(
-              (data.done / data.total) * 100
-            )
-          : 0;
-
-      const row =
-        document.createElement('div');
-
-      row.className =
-        'subj-row';
-
-      row.innerHTML = `
-        <div class="subj-top">
-          <span>${escapeHTML(subject)}</span>
-          <span class="pct">${percent}%</span>
-        </div>
-
-        <div class="subj-track">
-          <div
-            class="subj-fill"
-            style="width:${percent}%"
-          ></div>
-        </div>
-      `;
-
-      container.appendChild(row);
-    });
-  }
-
-  /* ---------- الإعدادات ---------- */
-
-  function renderSettings() {
-    if (!state.profile) return;
-
-    const school =
-      $('school-name');
-
-    if (school) {
-      school.value =
-        state.profile.school || '';
-
-      school.oninput = () => {
-        state.profile.school =
-          school.value;
-
-        autoSave();
-      };
-    }
-
-    const reminder =
-      $('reminder-note');
-
-    if (reminder) {
-      reminder.value =
-        state.profile.reminder || '';
-
-      reminder.oninput = () => {
-        state.profile.reminder =
-          reminder.value;
-
-        autoSave();
-      };
-    }
-
-    renderSubjects();
-    renderAccents();
-  }
-
-  function renderSubjects() {
-    const list =
-      $('subjects-list');
-
-    if (!list) return;
-
-    list.innerHTML = '';
-
-    state.profile.subjects.forEach(
-      (subject, index) => {
-
-        const row =
-          document.createElement('div');
-
-        row.className =
-          'subject-row';
-
-        const name =
-          document.createElement('span');
-
-        name.textContent =
-          subject;
-
-        const remove =
-          document.createElement('button');
-
-        remove.type = 'button';
-        remove.textContent = 'حذف';
-
-        remove.addEventListener(
-          'click',
-          () => {
-
-            if (
-              state.profile.subjects.length <= 1
-            ) {
-              alert(
-                'يجب أن تبقى مادة واحدة على الأقل.'
-              );
-
-              return;
+  // ---------- today tab ----------
+  function getEntry(dKey){
+    var e =
+      state.profile.entries[dKey];
+
+    if(!e){
+      e = {
+        tasks:
+          state.profile.subjects.map(
+            function(s){
+              return {
+                id:uid(),
+                label:s,
+                done:false
+              };
             }
-
-            const confirmed =
-              confirm(
-                `هل تريد حذف مادة «${subject}»؟`
-              );
-
-            if (!confirmed) return;
-
-            state.profile.subjects.splice(
-              index,
-              1
-            );
-
-            renderSubjects();
-
-            /*
-              لا نحذف المهام القديمة المرتبطة
-              بالمادة حتى لا نخسر سجل المستخدم.
-            */
-
-            autoSave();
-            renderToday();
-          }
-        );
-
-        row.appendChild(name);
-        row.appendChild(remove);
-
-        list.appendChild(row);
-      }
-    );
-  }
-
-  function addSubject() {
-    const input =
-      $('new-subject-input');
-
-    if (!input) return;
-
-    const subject =
-      input.value.trim();
-
-    if (!subject) {
-      input.focus();
-      return;
-    }
-
-    const exists =
-      state.profile.subjects.some(
-        s =>
-          s.toLowerCase() ===
-          subject.toLowerCase()
-      );
-
-    if (exists) {
-      alert(
-        'هذه المادة موجودة بالفعل.'
-      );
-
-      input.select();
-      return;
-    }
-
-    state.profile.subjects.push(subject);
-
-    input.value = '';
-
-    /*
-      إضافة مهمة للمادة في اليوم الحالي
-      حتى تظهر مباشرة للمستخدم.
-    */
-
-    const entry =
-      getEntry(state.selectedDate);
-
-    const alreadyHas =
-      entry.tasks.some(
-        task =>
-          task.subject === subject &&
-          task.system
-      );
-
-    if (!alreadyHas) {
-      entry.tasks.push({
-        id: createTaskId(),
-        text: `مراجعة ${subject}`,
-        subject,
-        done: false,
-        system: true
-      });
-
-      entry.updatedAt = Date.now();
-    }
-
-    renderSubjects();
-    renderToday();
-
-    autoSave();
-
-    input.focus();
-  }
-
-  function renderAccents() {
-    const container =
-      $('accent-swatches');
-
-    if (!container) return;
-
-    container.innerHTML = '';
-
-    ACCENTS.forEach(color => {
-      const swatch =
-        document.createElement('button');
-
-      swatch.type = 'button';
-      swatch.className = 'swatch';
-
-      if (
-        state.profile.accent === color
-      ) {
-        swatch.classList.add('selected');
-      }
-
-      swatch.style.background =
-        color;
-
-      swatch.setAttribute(
-        'aria-label',
-        `اختيار اللون ${color}`
-      );
-
-      swatch.addEventListener(
-        'click',
-        () => {
-
-          state.profile.accent =
-            color;
-
-          applyProfileAppearance();
-          renderAccents();
-
-          autoSave();
-        }
-      );
-
-      container.appendChild(swatch);
-    });
-  }
-
-  /* ---------- المظهر ---------- */
-
-  function applyProfileAppearance() {
-    if (!state.profile) return;
-
-    const root =
-      document.documentElement;
-
-    const accent =
-      state.profile.accent ||
-      ACCENTS[0];
-
-    root.style.setProperty(
-      '--accent',
-      accent
-    );
-
-    /*
-      حساب لون accent-dim بطريقة بسيطة.
-    */
-
-    root.style.setProperty(
-      '--accent-dim',
-      hexToRgba(accent, .42)
-    );
-
-    const bg =
-      state.profile.background;
-
-    if (bg) {
-      document.body.style.backgroundImage =
-        `
-          linear-gradient(
-            rgba(10,14,17,.72),
-            rgba(10,14,17,.72)
           ),
-          url("${bg}")
-        `;
-
-      document.body.style.backgroundSize =
-        'cover';
-
-      document.body.style.backgroundAttachment =
-        'fixed';
-
-      document.body.style.backgroundPosition =
-        'center';
-
-    } else {
-      document.body.style.backgroundImage =
-        `
-          radial-gradient(
-            circle at 1px 1px,
-            rgba(215,166,60,.09) 1px,
-            transparent 0
-          )
-        `;
-
-      document.body.style.backgroundSize =
-        '22px 22px';
-
-      document.body.style.backgroundAttachment =
-        'initial';
-    }
-  }
-
-  function hexToRgba(hex, alpha) {
-    const value =
-      String(hex)
-        .replace('#', '')
-        .trim();
-
-    if (value.length !== 6) {
-      return hex;
-    }
-
-    const r =
-      parseInt(value.slice(0, 2), 16);
-
-    const g =
-      parseInt(value.slice(2, 4), 16);
-
-    const b =
-      parseInt(value.slice(4, 6), 16);
-
-    return `rgba(${r},${g},${b},${alpha})`;
-  }
-
-  /* ---------- ضغط الصورة قبل التخزين ---------- */
-
-  function compressImage(file) {
-    return new Promise((resolve, reject) => {
-
-      if (!file) {
-        reject(
-          new Error('No file')
-        );
-
-        return;
-      }
-
-      const reader =
-        new FileReader();
-
-      reader.onload = () => {
-
-        const img =
-          new Image();
-
-        img.onload = () => {
-
-          const maxSize = 1600;
-
-          let width =
-            img.naturalWidth;
-
-          let height =
-            img.naturalHeight;
-
-          if (
-            width > maxSize ||
-            height > maxSize
-          ) {
-            const ratio =
-              Math.min(
-                maxSize / width,
-                maxSize / height
-              );
-
-            width =
-              Math.round(width * ratio);
-
-            height =
-              Math.round(height * ratio);
-          }
-
-          const canvas =
-            document.createElement('canvas');
-
-          canvas.width =
-            width;
-
-          canvas.height =
-            height;
-
-          const ctx =
-            canvas.getContext('2d');
-
-          ctx.drawImage(
-            img,
-            0,
-            0,
-            width,
-            height
-          );
-
-          const result =
-            canvas.toDataURL(
-              'image/jpeg',
-              .75
-            );
-
-          resolve(result);
-        };
-
-        img.onerror =
-          () => reject(
-            new Error(
-              'تعذر قراءة الصورة'
-            )
-          );
-
-        img.src =
-          reader.result;
+        note:""
       };
 
-      reader.onerror =
-        () => reject(
-          new Error(
-            'تعذر قراءة الملف'
-          )
-        );
-
-      reader.readAsDataURL(file);
-    });
-  }
-
-  /* ---------- الخلفية ---------- */
-
-  async function handleBackground(file) {
-    if (!file) return;
-
-    if (!file.type.startsWith('image/')) {
-      alert(
-        'اختر ملف صورة صالحاً.'
-      );
-
-      return;
+      state.profile.entries[dKey] = e;
+    }else{
+      addMissingSubjectsToEntry(e);
     }
 
-    try {
-      const compressed =
-        await compressImage(file);
-
-      state.profile.background =
-        compressed;
-
-      applyProfileAppearance();
-
-      await saveProfile(true);
-
-    } catch (error) {
-      console.error(error);
-
-      alert(
-        'تعذر إضافة الخلفية.'
-      );
-    }
-  }
-
-  function removeBackground() {
-    if (!state.profile.background) {
-      return;
-    }
-
-    const confirmed =
-      confirm(
-        'هل تريد إزالة الخلفية الحالية؟'
-      );
-
-    if (!confirmed) return;
-
-    state.profile.background = '';
-
-    applyProfileAppearance();
-
-    saveProfile(true);
-  }
-
-  /* ---------- النسخ الاحتياطي ---------- */
-
-  function exportData() {
-    if (!state.profile) return;
-
-    const backup = {
-      app: 'رفيق البكالوريا 2027',
-      version: 2,
-      exportedAt: new Date().toISOString(),
-      profile: state.profile
-    };
-
-    const blob =
-      new Blob(
-        [JSON.stringify(
-          backup,
-          null,
-          2
-        )],
-        {
-          type:'application/json'
-        }
-      );
-
-    const url =
-      URL.createObjectURL(blob);
-
-    const a =
-      document.createElement('a');
-
-    a.href = url;
-
-    const safeName =
-      String(
-        state.profile.username
-      )
-      .replace(
-        /[^a-zA-Z0-9\u0600-\u06FF_-]/g,
-        '_'
-      );
-
-    a.download =
-      `bac2027_${safeName}_backup.json`;
-
-    document.body.appendChild(a);
-
-    a.click();
-
-    a.remove();
-
-    setTimeout(() => {
-      URL.revokeObjectURL(url);
-    }, 1000);
-  }
-
-  async function importData(file) {
-    if (!file) return;
-
-    try {
-      const text =
-        await file.text();
-
-      const backup =
-        JSON.parse(text);
-
-      const imported =
-        backup.profile || backup;
-
-      if (
-        !imported ||
-        typeof imported !== 'object' ||
-        !Array.isArray(imported.subjects) ||
-        !imported.entries
-      ) {
-        throw new Error(
-          'Invalid backup'
-        );
-      }
-
-      const confirmed =
-        confirm(
-          'سيتم استبدال بيانات الحساب الحالية بالنسخة المستوردة. هل تريد المتابعة؟'
-        );
-
-      if (!confirmed) return;
-
-      state.profile =
-        normalizeProfile(
-          imported,
-          state.profile.username
-        );
-
-      await saveProfile(true);
-
-      applyProfileAppearance();
-      renderDashboard();
-
-      alert(
-        'تم استيراد بياناتك بنجاح.'
-      );
-
-    } catch (error) {
-      console.error(error);
-
-      alert(
-        'ملف النسخة الاحتياطية غير صالح أو تالف.'
-      );
-    }
-  }
-
-  /* ---------- حذف البيانات ---------- */
-
-  async function deleteAccountData() {
-    if (!state.profileKey) return;
-
-    const confirmation =
-      prompt(
-        'لحذف الحساب نهائياً، اكتب: حذف'
-      );
-
-    if (confirmation !== 'حذف') {
-      return;
-    }
-
-    await storageDelete(
-      state.profileKey
-    );
-
-    state.profile = null;
-    state.profileKey = null;
-
-    dashboardScreen.classList.add('hidden');
-    loginScreen.classList.remove('hidden');
-
-    if ($('in-username')) {
-      $('in-username').value = '';
-    }
-
-    if ($('in-pin')) {
-      $('in-pin').value = '';
-    }
-
-    updateKnownUsers();
-
-    showMessage(
-      'تم حذف بيانات الحساب من التخزين المتاح.',
-      'ok'
-    );
-  }
-
-  /* ---------- أحداث الواجهة ---------- */
-
-  function bindEvents() {
-
-    $('btn-login')?.addEventListener(
-      'click',
-      login
-    );
-
-    $('btn-logout')?.addEventListener(
-      'click',
-      () => {
-        saveProfile(false);
-        logout();
-      }
-    );
-
-    $('in-pin')?.addEventListener(
-      'input',
-      e => {
-        e.target.value =
-          e.target.value
-            .replace(/\D/g, '')
-            .slice(0, 4);
-      }
-    );
-
-    $('in-pin')?.addEventListener(
-      'keydown',
-      e => {
-        if (e.key === 'Enter') {
-          login();
-        }
-      }
-    );
-
-    $('in-username')?.addEventListener(
-      'keydown',
-      e => {
-        if (e.key === 'Enter') {
-          $('in-pin')?.focus();
-        }
-      }
-    );
-
-    document
-      .querySelectorAll('.tab-btn')
-      .forEach(button => {
-        button.addEventListener(
-          'click',
-          () => {
-            openTab(button.dataset.tab);
-          }
-        );
-      });
-
-    $('date-prev')?.addEventListener(
-      'click',
-      () => changeDate(-1)
-    );
-
-    $('date-next')?.addEventListener(
-      'click',
-      () => changeDate(1)
-    );
-
-    $('btn-add-task')?.addEventListener(
-      'click',
-      addTask
-    );
-
-    $('new-task-input')?.addEventListener(
-      'keydown',
-      e => {
-        if (e.key === 'Enter') {
-          addTask();
-        }
-      }
-    );
-
-    $('btn-save-day')?.addEventListener(
-      'click',
-      () => saveProfile(true)
-    );
-
-    $('btn-add-subject')?.addEventListener(
-      'click',
-      addSubject
-    );
-
-    $('new-subject-input')?.addEventListener(
-      'keydown',
-      e => {
-        if (e.key === 'Enter') {
-          addSubject();
-        }
-      }
-    );
-
-    $('bg-image-input')?.addEventListener(
-      'change',
-      e => {
-        const file =
-          e.target.files?.[0];
-
-        handleBackground(file);
-
-        e.target.value = '';
-      }
-    );
-
-    $('btn-remove-bg')?.addEventListener(
-      'click',
-      removeBackground
-    );
-
-    $('btn-export')?.addEventListener(
-      'click',
-      exportData
-    );
-
-    $('import-file')?.addEventListener(
-      'change',
-      e => {
-        const file =
-          e.target.files?.[0];
-
-        importData(file);
-
-        e.target.value = '';
-      }
-    );
-
-    $('btn-delete-data')?.addEventListener(
-      'click',
-      deleteAccountData
-    );
-
-    /*
-      اختصار لوحة المفاتيح:
-      Ctrl/Cmd + S = حفظ
-    */
-
-    document.addEventListener(
-      'keydown',
-      e => {
-
-        if (
-          (e.ctrlKey || e.metaKey) &&
-          e.key.toLowerCase() === 's'
-        ) {
-          e.preventDefault();
-
-          if (state.profile) {
-            saveProfile(true);
-          }
-        }
-      }
-    );
-  }
-
-  /* ---------- التشغيل ---------- */
-
-  bindEvents();
-
-  updateCountdown();
-
-  setInterval(
-    updateCountdown,
-    1000
-  );
-
-  updateKnownUsers();
-
-})();
-</script>
-    }
     return e;
   }
 
   function renderToday(){
-    var dKey = dateKey(state.selectedDate);
-    var entry = getEntry(dKey);
+    var dKey =
+      dateKey(
+        state.selectedDate
+      );
 
-    var weekday = WEEKDAYS[state.selectedDate.getDay()];
-    var d1 = weekday + "، " + state.selectedDate.getDate() + " " + MONTHS[state.selectedDate.getMonth()];
-    var isToday = sameDay(state.selectedDate, todayMidnight());
+    var entry =
+      getEntry(dKey);
 
-    document.getElementById("date-d1").textContent = d1;
-    document.getElementById("date-d2").textContent =
-      isToday ? "اليوم" :
-      (state.selectedDate < todayMidnight() ? "يوم فائت" : "يوم قادم");
+    var weekday =
+      WEEKDAYS[
+        state.selectedDate.getDay()
+      ];
 
-    var list = document.getElementById("task-list");
+    var d1 =
+      weekday +
+      "، " +
+      state.selectedDate.getDate() +
+      " " +
+      MONTHS[
+        state.selectedDate.getMonth()
+      ];
+
+    var isToday =
+      sameDay(
+        state.selectedDate,
+        todayMidnight()
+      );
+
+    document.getElementById("date-d1")
+      .textContent = d1;
+
+    document.getElementById("date-d2")
+      .textContent =
+      isToday
+        ? "اليوم"
+        : (
+          state.selectedDate <
+          todayMidnight()
+            ? "يوم فائت"
+            : "يوم قادم"
+        );
+
+    var list =
+      document.getElementById("task-list");
+
     list.innerHTML = "";
 
     entry.tasks.forEach(function(t){
-      var li = document.createElement("li");
-      li.className = "task-item" + (t.done ? " done" : "");
+      var li =
+        document.createElement("li");
 
-      var check = document.createElement("div");
+      li.className =
+        "task-item" +
+        (t.done ? " done" : "");
+
+      var check =
+        document.createElement("div");
+
       check.className = "check";
-      check.textContent = t.done ? "✓" : "";
+      check.textContent =
+        t.done ? "✓" : "";
 
-      check.addEventListener("click", function(){
-        t.done = !t.done;
-        renderTaskListOnly(entry);
-        scheduleSave();
-      });
+      check.addEventListener(
+        "click",
+        function(){
+          t.done = !t.done;
 
-      var label = document.createElement("div");
+          renderTaskListOnly(entry);
+
+          scheduleSave();
+        }
+      );
+
+      var label =
+        document.createElement("div");
+
       label.className = "label";
       label.textContent = t.label;
 
-      var rm = document.createElement("button");
+      var rm =
+        document.createElement("button");
+
       rm.className = "remove";
       rm.textContent = "حذف";
 
-      rm.addEventListener("click", function(){
-        entry.tasks = entry.tasks.filter(function(x){
-          return x.id !== t.id;
-        });
+      rm.addEventListener(
+        "click",
+        function(){
+          entry.tasks =
+            entry.tasks.filter(
+              function(x){
+                return x.id !== t.id;
+              }
+            );
 
-        renderTaskListOnly(entry);
-        scheduleSave();
-      });
+          state.profile.entries[
+            state.currentDateKey
+          ] = entry;
+
+          renderTaskListOnly(entry);
+
+          saveProfile(
+            state.profileKey,
+            state.profile
+          );
+
+          scheduleSave();
+        }
+      );
 
       li.appendChild(check);
       li.appendChild(label);
       li.appendChild(rm);
+
       list.appendChild(li);
     });
 
-    document.getElementById("journal-text").value = entry.note || "";
+    document.getElementById("journal-text")
+      .value = entry.note || "";
 
-    document.getElementById("date-prev").disabled =
-      sameDay(state.selectedDate, accountStartMidnight());
+    document.getElementById("date-prev")
+      .disabled =
+      sameDay(
+        state.selectedDate,
+        accountStartMidnight()
+      );
 
-    var examMid = new Date(EXAM_DATE);
+    var examMid =
+      new Date(EXAM_DATE);
+
     examMid.setHours(0,0,0,0);
 
-    document.getElementById("date-next").disabled =
-      sameDay(state.selectedDate, examMid);
+    document.getElementById("date-next")
+      .disabled =
+      sameDay(
+        state.selectedDate,
+        examMid
+      );
 
     state.currentEntry = entry;
     state.currentDateKey = dKey;
 
-    document.getElementById("save-status").classList.remove("show");
+    document.getElementById("save-status")
+      .classList.remove("show");
 
-    var nudge = document.getElementById("nudge-banner");
+    var nudge =
+      document.getElementById("nudge-banner");
 
     var hasActivity =
       entry.note ||
@@ -2867,433 +1881,507 @@
         return t.done;
       });
 
-    nudge.classList.toggle("hidden", !(isToday && !hasActivity));
+    nudge.classList.toggle(
+      "hidden",
+      !(isToday && !hasActivity)
+    );
 
     var quote =
-      MOTIVATIONS[hashDateKey(dKey) % MOTIVATIONS.length];
+      MOTIVATIONS[
+        hashDateKey(dKey) %
+        MOTIVATIONS.length
+      ];
 
-    document.getElementById("daily-quote").textContent =
+    document.getElementById("daily-quote")
+      .textContent =
       "💬 " + quote;
   }
 
   function renderTaskListOnly(entry){
-    var list = document.getElementById("task-list");
+    var list =
+      document.getElementById("task-list");
+
     list.innerHTML = "";
 
     entry.tasks.forEach(function(t){
-      var li = document.createElement("li");
-      li.className = "task-item" + (t.done ? " done" : "");
+      var li =
+        document.createElement("li");
 
-      var check = document.createElement("div");
+      li.className =
+        "task-item" +
+        (t.done ? " done" : "");
+
+      var check =
+        document.createElement("div");
+
       check.className = "check";
-      check.textContent = t.done ? "✓" : "";
 
-      check.addEventListener("click", function(){
-        t.done = !t.done;
-        renderTaskListOnly(entry);
-        scheduleSave();
-      });
+      check.textContent =
+        t.done ? "✓" : "";
 
-      var label = document.createElement("div");
+      check.addEventListener(
+        "click",
+        function(){
+          t.done = !t.done;
+
+          renderTaskListOnly(entry);
+
+          scheduleSave();
+        }
+      );
+
+      var label =
+        document.createElement("div");
+
       label.className = "label";
       label.textContent = t.label;
 
-      var rm = document.createElement("button");
+      var rm =
+        document.createElement("button");
+
       rm.className = "remove";
       rm.textContent = "حذف";
 
-      rm.addEventListener("click", function(){
-        entry.tasks = entry.tasks.filter(function(x){
-          return x.id !== t.id;
-        });
+      rm.addEventListener(
+        "click",
+        function(){
+          entry.tasks =
+            entry.tasks.filter(
+              function(x){
+                return x.id !== t.id;
+              }
+            );
 
-        renderTaskListOnly(entry);
-        scheduleSave();
-      });
+          state.profile.entries[
+            state.currentDateKey
+          ] = entry;
+
+          renderTaskListOnly(entry);
+
+          saveProfile(
+            state.profileKey,
+            state.profile
+          );
+
+          scheduleSave();
+        }
+      );
 
       li.appendChild(check);
       li.appendChild(label);
       li.appendChild(rm);
+
       list.appendChild(li);
     });
   }
 
+  var saveTimer = null;
+
+  function scheduleSave(){
+    clearTimeout(saveTimer);
+
+    saveTimer =
+      setTimeout(
+        function(){
+          saveCurrentDay();
+        },
+        350
+      );
+  }
+
   async function saveCurrentDay(){
+    if(!state.currentEntry) return;
+
     state.currentEntry.note =
-      document.getElementById("journal-text").value;
+      document.getElementById(
+        "journal-text"
+      ).value;
 
-    state.profile.entries[state.currentDateKey] =
-      state.currentEntry;
+    state.profile.entries[
+      state.currentDateKey
+    ] = state.currentEntry;
 
-    var ok = await saveProfile(
-      state.profileKey,
-      state.profile
-    );
+    var ok =
+      await persistNow();
 
-    var status = document.getElementById("save-status");
+    var status =
+      document.getElementById(
+        "save-status"
+      );
 
     if(ok){
       status.textContent =
-        persistenceAvailable
-          ? "تم الحفظ ✓"
-          : "تم الحفظ لهذه الجلسة فقط (بدون حفظ دائم)";
-
-      status.style.color =
-        persistenceAvailable
-          ? "var(--green)"
-          : "var(--gold)";
+        "تم الحفظ ✓";
 
       status.classList.add("show");
-
-      setTimeout(function(){
-        status.classList.remove("show");
-      }, 2400);
-
     }else{
       status.textContent =
-        "تعذّر الحفظ: " +
-        (lastStorageError || "خطأ غير معروف");
+        "تعذّر الحفظ";
 
-      status.style.color = "var(--red)";
       status.classList.add("show");
     }
   }
 
+  // ---------- date navigation ----------
   function accountStartMidnight(){
-    if(state.profile && state.profile.createdAt){
-      var parts = state.profile.createdAt.split("-");
-
-      return new Date(
-        +parts[0],
-        +parts[1]-1,
-        +parts[2]
+    var d =
+      new Date(
+        state.profile.createdAt
       );
-    }
 
-    return todayMidnight();
+    d.setHours(0,0,0,0);
+
+    return d;
   }
 
   function changeDay(delta){
-    var d = new Date(state.selectedDate);
-    d.setDate(d.getDate() + delta);
+    var d =
+      new Date(
+        state.selectedDate
+      );
 
-    var examMid = new Date(EXAM_DATE);
-    examMid.setHours(0,0,0,0);
+    d.setDate(
+      d.getDate() + delta
+    );
 
-    var lowerBound = accountStartMidnight();
+    var start =
+      accountStartMidnight();
 
-    if(d < lowerBound || d > examMid) return;
+    var exam =
+      new Date(EXAM_DATE);
+
+    exam.setHours(0,0,0,0);
+
+    if(d < start || d > exam){
+      return;
+    }
 
     state.selectedDate = d;
+
     renderToday();
   }
 
-  /* =========================
-     CALENDAR
-  ========================= */
-
+  // ---------- calendar ----------
   function renderCalendar(){
     var container =
-      document.getElementById("calendar-container");
+      document.getElementById(
+        "calendar-container"
+      );
 
     container.innerHTML = "";
 
-    var start = accountStartMidnight();
-    var today = todayMidnight();
+    var start =
+      accountStartMidnight();
 
-    var end = new Date(EXAM_DATE);
+    var end =
+      new Date(EXAM_DATE);
+
     end.setHours(0,0,0,0);
 
-    var cursor = new Date(
-      start.getFullYear(),
-      start.getMonth(),
-      1
-    );
+    var cursor =
+      new Date(start);
+
+    var months = {};
 
     while(cursor <= end){
+      var key =
+        cursor.getFullYear() +
+        "-" +
+        cursor.getMonth();
 
-      var monthBlock =
-        document.createElement("div");
-
-      monthBlock.className = "month-block";
-
-      var h3 = document.createElement("h3");
-
-      h3.textContent =
-        MONTHS[cursor.getMonth()] +
-        " " +
-        cursor.getFullYear();
-
-      monthBlock.appendChild(h3);
-
-      var grid =
-        document.createElement("div");
-
-      grid.className = "cal-grid";
-
-      WEEKDAYS.forEach(function(w){
-        var hd =
-          document.createElement("div");
-
-        hd.className = "cal-head";
-        hd.textContent = w;
-
-        grid.appendChild(hd);
-      });
-
-      var firstOfMonth =
-        new Date(
-          cursor.getFullYear(),
-          cursor.getMonth(),
-          1
-        );
-
-      var leadBlanks =
-        firstOfMonth.getDay();
-
-      for(var b = 0; b < leadBlanks; b++){
-        var blank =
-          document.createElement("div");
-
-        blank.className =
-          "cal-cell empty";
-
-        grid.appendChild(blank);
+      if(!months[key]){
+        months[key] = [];
       }
 
-      var daysInMonth =
-        new Date(
-          cursor.getFullYear(),
-          cursor.getMonth()+1,
-          0
-        ).getDate();
+      months[key].push(
+        new Date(cursor)
+      );
 
-      for(
-        var day = 1;
-        day <= daysInMonth;
-        day++
-      ){
-
-        var d =
-          new Date(
-            cursor.getFullYear(),
-            cursor.getMonth(),
-            day
-          );
-
-        var cell =
-          document.createElement("div");
-
-        cell.textContent = day;
-        cell.className = "cal-cell";
-
-        if(d < start || d > end){
-
-          cell.classList.add("empty");
-          cell.textContent = "";
-
-        }else{
-
-          var k = dateKey(d);
-          var entry = state.profile.entries[k];
-
-          var hasActivity =
-            entry &&
-            (
-              entry.note ||
-              entry.tasks.some(function(t){
-                return t.done;
-              })
-            );
-
-          if(sameDay(d, end)){
-            cell.classList.add("exam-day");
-
-          }else if(hasActivity){
-            cell.classList.add("active-day");
-
-          }else if(d < today){
-            cell.classList.add("missed");
-
-          }else{
-            cell.classList.add("future");
-          }
-
-          if(sameDay(d, today)){
-            cell.classList.add("today");
-          }
-
-          cell.addEventListener(
-            "click",
-            function(dateClicked){
-              return function(){
-
-                state.selectedDate =
-                  dateClicked;
-
-                switchTab("today");
-                renderToday();
-
-              };
-            }(d)
-          );
-        }
-
-        grid.appendChild(cell);
-      }
-
-      monthBlock.appendChild(grid);
-      container.appendChild(monthBlock);
-
-      cursor.setMonth(
-        cursor.getMonth() + 1
+      cursor.setDate(
+        cursor.getDate() + 1
       );
     }
+
+    Object.keys(months).forEach(
+      function(key){
+        var days = months[key];
+
+        var first = days[0];
+
+        var block =
+          document.createElement("div");
+
+        block.className =
+          "calendar-month";
+
+        var title =
+          document.createElement("h3");
+
+        title.textContent =
+          MONTHS[first.getMonth()] +
+          " " +
+          first.getFullYear();
+
+        block.appendChild(title);
+
+        var grid =
+          document.createElement("div");
+
+        grid.className =
+          "calendar-grid";
+
+        WEEKDAYS.forEach(
+          function(w){
+            var head =
+              document.createElement("div");
+
+            head.className =
+              "calendar-weekday";
+
+            head.textContent = w;
+
+            grid.appendChild(head);
+          }
+        );
+
+        var firstDay =
+          first.getDay();
+
+        for(
+          var empty=0;
+          empty<firstDay;
+          empty++
+        ){
+          var spacer =
+            document.createElement("div");
+
+          spacer.className =
+            "calendar-day empty";
+
+          grid.appendChild(spacer);
+        }
+
+        days.forEach(
+          function(day){
+            var dKey =
+              dateKey(day);
+
+            var entry =
+              state.profile.entries[dKey];
+
+            var active =
+              entry &&
+              (
+                entry.note ||
+                entry.tasks.some(
+                  function(t){
+                    return t.done;
+                  }
+                )
+              );
+
+            var cell =
+              document.createElement("button");
+
+            cell.className =
+              "calendar-day" +
+              (active ? " active" : "") +
+              (
+                sameDay(
+                  day,
+                  todayMidnight()
+                )
+                  ? " today"
+                  : ""
+              );
+
+            cell.textContent =
+              day.getDate();
+
+            cell.addEventListener(
+              "click",
+              function(){
+                state.selectedDate =
+                  new Date(day);
+
+                switchTab("today");
+              }
+            );
+
+            grid.appendChild(cell);
+          }
+        );
+
+        block.appendChild(grid);
+        container.appendChild(block);
+      }
+    );
   }
 
-  /* =========================
-     STATISTICS
-  ========================= */
-
+  // ---------- statistics ----------
   function renderStats(){
-
-    var start = accountStartMidnight();
-    var today = todayMidnight();
-
-    var end = new Date(EXAM_DATE);
-    end.setHours(0,0,0,0);
-
-    var remaining =
-      Math.round(
-        (end - today) / 86400000
-      );
-
     var entries =
       state.profile.entries;
 
+    var today =
+      todayMidnight();
+
+    var start =
+      accountStartMidnight();
+
+    var remaining =
+      Math.max(
+        0,
+        Math.ceil(
+          (EXAM_DATE - new Date()) /
+          86400000
+        )
+      );
+
     var activeDays = 0;
     var totalDoneTasks = 0;
-    var activeDateKeys = [];
 
-    Object.keys(entries).forEach(function(k){
+    Object.keys(entries).forEach(
+      function(k){
+        var e = entries[k];
 
-      var e = entries[k];
+        if(
+          e.note ||
+          e.tasks.some(
+            function(t){
+              return t.done;
+            }
+          )
+        ){
+          activeDays++;
+        }
 
-      var doneCount =
-        e.tasks.filter(function(t){
-          return t.done;
-        }).length;
-
-      totalDoneTasks += doneCount;
-
-      if(
-        e.note ||
-        doneCount > 0
-      ){
-
-        activeDays++;
-        activeDateKeys.push(k);
+        totalDoneTasks +=
+          e.tasks.filter(
+            function(t){
+              return t.done;
+            }
+          ).length;
       }
-    });
-
-    activeDateKeys.sort();
+    );
 
     var longest = 0;
-    var current = 0;
-    var prevDate = null;
+    var cur = 0;
 
-    activeDateKeys.forEach(function(k){
+    var cursor =
+      new Date(start);
 
-      var parts = k.split("-");
+    while(cursor <= today){
+      var ck =
+        dateKey(cursor);
 
-      var d =
-        new Date(
-          +parts[0],
-          +parts[1]-1,
-          +parts[2]
-        );
-
-      if(prevDate){
-
-        var diffDays =
-          Math.round(
-            (d - prevDate) / 86400000
-          );
-
-        current =
-          diffDays === 1
-            ? current + 1
-            : 1;
-
-      }else{
-        current = 1;
-      }
-
-      longest =
-        Math.max(longest, current);
-
-      prevDate = d;
-    });
-
-    var curStreak = 0;
-    var cursor = new Date(today);
-
-    var todayKey = dateKey(today);
-    var todayEntry = entries[todayKey];
-
-    var todayActive =
-      todayEntry &&
-      (
-        todayEntry.note ||
-        todayEntry.tasks.some(function(t){
-          return t.done;
-        })
-      );
-
-    if(!todayActive){
-      cursor.setDate(
-        cursor.getDate() - 1
-      );
-    }
-
-    while(cursor >= start){
-
-      var ck = dateKey(cursor);
-      var ce = entries[ck];
+      var ce =
+        entries[ck];
 
       var active =
         ce &&
         (
           ce.note ||
-          ce.tasks.some(function(t){
-            return t.done;
-          })
+          ce.tasks.some(
+            function(t){
+              return t.done;
+            }
+          )
         );
 
-      if(!active) break;
+      if(active){
+        cur++;
+        longest =
+          Math.max(
+            longest,
+            cur
+          );
+      }else{
+        cur = 0;
+      }
+
+      cursor.setDate(
+        cursor.getDate() + 1
+      );
+    }
+
+    var curStreak = 0;
+
+    var cursor2 =
+      new Date(today);
+
+    var todayEntry =
+      entries[
+        dateKey(cursor2)
+      ];
+
+    var todayActive =
+      todayEntry &&
+      (
+        todayEntry.note ||
+        todayEntry.tasks.some(
+          function(t){
+            return t.done;
+          }
+        )
+      );
+
+    if(!todayActive){
+      cursor2.setDate(
+        cursor2.getDate() - 1
+      );
+    }
+
+    while(cursor2 >= start){
+      var ck2 =
+        dateKey(cursor2);
+
+      var ce2 =
+        entries[ck2];
+
+      var active2 =
+        ce2 &&
+        (
+          ce2.note ||
+          ce2.tasks.some(
+            function(t){
+              return t.done;
+            }
+          )
+        );
+
+      if(!active2){
+        break;
+      }
 
       curStreak++;
 
-      cursor.setDate(
-        cursor.getDate() - 1
+      cursor2.setDate(
+        cursor2.getDate() - 1
       );
     }
 
     var missed = 0;
-    var mCursor = new Date(start);
+
+    var mCursor =
+      new Date(start);
 
     while(mCursor < today){
+      var mk =
+        dateKey(mCursor);
 
-      var mk = dateKey(mCursor);
-      var me = entries[mk];
+      var me =
+        entries[mk];
 
       var mActive =
         me &&
         (
           me.note ||
-          me.tasks.some(function(t){
-            return t.done;
-          })
+          me.tasks.some(
+            function(t){
+              return t.done;
+            }
+          )
         );
 
       if(!mActive){
@@ -3305,13 +2393,11 @@
       );
     }
 
-    var createdAt = start;
-
     var daysSinceCreation =
       Math.max(
         1,
         Math.round(
-          (today - createdAt) /
+          (today - start) /
           86400000
         ) + 1
       );
@@ -3321,7 +2407,8 @@
         100,
         Math.round(
           (activeDays /
-          daysSinceCreation) * 100
+          daysSinceCreation) *
+          100
         )
       );
 
@@ -3351,7 +2438,8 @@
 
     document.getElementById(
       "progress-pct"
-    ).textContent = pct + "%";
+    ).textContent =
+      pct + "%";
 
     var circle =
       document.getElementById(
@@ -3366,8 +2454,10 @@
 
     circle.style.strokeDashoffset =
       circumference -
-      (pct / 100) * circumference;
+      (pct / 100) *
+      circumference;
 
+    // 14-day chart
     var chart =
       document.getElementById(
         "bar-chart"
@@ -3377,9 +2467,13 @@
 
     var last14 = [];
 
-    for(var i = 13; i >= 0; i--){
-
-      var dd = new Date(today);
+    for(
+      var i=13;
+      i>=0;
+      i--
+    ){
+      var dd =
+        new Date(today);
 
       dd.setDate(
         dd.getDate() - i
@@ -3390,73 +2484,84 @@
 
     var maxTasks = 1;
 
-    last14.forEach(function(dd){
+    last14.forEach(
+      function(dd){
+        var e =
+          entries[dateKey(dd)];
 
-      var e =
-        entries[dateKey(dd)];
-
-      if(e){
-
-        maxTasks =
-          Math.max(
-            maxTasks,
-            e.tasks.filter(function(t){
-              return t.done;
-            }).length
-          );
+        if(e){
+          maxTasks =
+            Math.max(
+              maxTasks,
+              e.tasks.filter(
+                function(t){
+                  return t.done;
+                }
+              ).length
+            );
+        }
       }
-    });
+    );
 
-    last14.forEach(function(dd){
+    last14.forEach(
+      function(dd){
+        var e =
+          entries[dateKey(dd)];
 
-      var e =
-        entries[dateKey(dd)];
+        var doneCount =
+          e
+            ? e.tasks.filter(
+                function(t){
+                  return t.done;
+                }
+              ).length
+            : 0;
 
-      var doneCount =
-        e
-          ? e.tasks.filter(function(t){
-              return t.done;
-            }).length
-          : 0;
+        var col =
+          document.createElement("div");
 
-      var col =
-        document.createElement("div");
+        col.className =
+          "bar-col" +
+          (
+            sameDay(dd,today)
+              ? " today"
+              : ""
+          );
 
-      col.className =
-        "bar-col" +
-        (
-          sameDay(dd, today)
-            ? " today"
-            : ""
-        );
+        var bar =
+          document.createElement("div");
 
-      var bar =
-        document.createElement("div");
+        bar.className = "bar";
 
-      bar.className = "bar";
+        bar.style.height =
+          (
+            dd < start
+              ? 0
+              : Math.max(
+                  4,
+                  (doneCount /
+                  maxTasks) *
+                  84
+                )
+          ) + "px";
 
-      bar.style.height =
-        (
-          dd < start
-            ? 0
-            : Math.max(
-                4,
-                (doneCount / maxTasks) * 84
-              )
-        ) + "px";
+        var lbl =
+          document.createElement("div");
 
-      var lbl =
-        document.createElement("div");
+        lbl.className =
+          "bar-day";
 
-      lbl.className = "bar-day";
-      lbl.textContent = dd.getDate();
+        lbl.textContent =
+          dd.getDate();
 
-      col.appendChild(bar);
-      col.appendChild(lbl);
+        col.appendChild(bar);
+        col.appendChild(lbl);
 
-      chart.appendChild(col);
-    });
+        chart.appendChild(col);
+      }
+    );
 
+    // subject statistics
     var subjBox =
       document.getElementById(
         "subject-stats"
@@ -3466,82 +2571,81 @@
 
     var subjTotals = {};
 
-    Object.keys(entries).forEach(function(k){
+    Object.keys(entries).forEach(
+      function(k){
+        entries[k].tasks.forEach(
+          function(t){
+            if(!subjTotals[t.label]){
+              subjTotals[t.label] = {
+                assigned:0,
+                done:0
+              };
+            }
 
-      entries[k].tasks.forEach(function(t){
+            subjTotals[t.label]
+              .assigned++;
 
-        if(!subjTotals[t.label]){
-          subjTotals[t.label] = {
-            assigned: 0,
-            done: 0
-          };
-        }
-
-        subjTotals[t.label].assigned++;
-
-        if(t.done){
-          subjTotals[t.label].done++;
-        }
-      });
-    });
+            if(t.done){
+              subjTotals[t.label]
+                .done++;
+            }
+          }
+        );
+      }
+    );
 
     var subjNames =
       Object.keys(subjTotals);
 
     if(!subjNames.length){
-
       subjBox.innerHTML =
         "<p style='color:var(--text-muted);font-size:13.5px;'>لا توجد بيانات كافية بعد — سجّل بضعة أيام لتظهر هنا.</p>";
-
     }else{
+      subjNames.sort(
+        function(a,b){
+          return
+            subjTotals[b].done -
+            subjTotals[a].done;
+        }
+      );
 
-      subjNames.sort(function(a,b){
-        return (
-          subjTotals[b].done -
-          subjTotals[a].done
-        );
-      });
+      subjNames.forEach(
+        function(name){
+          var s =
+            subjTotals[name];
 
-      subjNames.forEach(function(name){
+          var p =
+            s.assigned
+              ? Math.round(
+                  (s.done /
+                  s.assigned) *
+                  100
+                )
+              : 0;
 
-        var s =
-          subjTotals[name];
+          var row =
+            document.createElement("div");
 
-        var p =
-          s.assigned
-            ? Math.round(
-                (s.done /
-                s.assigned) * 100
-              )
-            : 0;
+          row.className =
+            "subj-row";
 
-        var row =
-          document.createElement("div");
+          row.innerHTML =
+            '<div class="subj-top">' +
+              '<span>'+name+'</span>' +
+              '<span class="pct">'+p+'%</span>' +
+            '</div>' +
+            '<div class="subj-track">' +
+              '<div class="subj-fill" style="width:'+p+'%"></div>' +
+            '</div>';
 
-        row.className = "subj-row";
-
-        row.innerHTML =
-          '<div class="subj-top">' +
-          '<span>' + name + '</span>' +
-          '<span class="pct">' + p + '%</span>' +
-          '</div>' +
-          '<div class="subj-track">' +
-          '<div class="subj-fill" style="width:' +
-          p +
-          '%"></div>' +
-          '</div>';
-
-        subjBox.appendChild(row);
-      });
+          subjBox.appendChild(row);
+        }
+      );
     }
   }
 
-  /* =========================
-     SETTINGS
-  ========================= */
-
+  // ---------- settings ----------
   function renderSettings(){
-
     var theme =
       state.profile.theme ||
       DEFAULT_THEME;
@@ -3553,49 +2657,46 @@
 
     swatchRow.innerHTML = "";
 
-    ACCENT_PRESETS.forEach(function(p){
+    ACCENT_PRESETS.forEach(
+      function(p){
+        var sw =
+          document.createElement("div");
 
-      var sw =
-        document.createElement("div");
+        sw.className =
+          "swatch" +
+          (
+            theme.accent === p.accent
+              ? " selected"
+              : ""
+          );
 
-      sw.className =
-        "swatch" +
-        (
-          theme.accent === p.accent
-            ? " selected"
-            : ""
+        sw.style.background =
+          p.accent;
+
+        sw.title = p.name;
+
+        sw.addEventListener(
+          "click",
+          async function(){
+            state.profile.theme = {
+              accent:p.accent,
+              dim:p.dim,
+              text:p.text
+            };
+
+            applyTheme(
+              state.profile.theme
+            );
+
+            await persistNow();
+
+            renderSettings();
+          }
         );
 
-      sw.style.background =
-        p.accent;
-
-      sw.title = p.name;
-
-      sw.addEventListener(
-        "click",
-        async function(){
-
-          state.profile.theme = {
-            accent: p.accent,
-            dim: p.dim,
-            text: p.text
-          };
-
-          applyTheme(
-            state.profile.theme
-          );
-
-          await saveProfile(
-            state.profileKey,
-            state.profile
-          );
-
-          renderSettings();
-        }
-      );
-
-      swatchRow.appendChild(sw);
-    });
+        swatchRow.appendChild(sw);
+      }
+    );
 
     document.getElementById(
       "custom-color"
@@ -3621,8 +2722,7 @@
     box.innerHTML = "";
 
     state.profile.subjects.forEach(
-      function(subj, idx){
-
+      function(subj,idx){
         var row =
           document.createElement("div");
 
@@ -3642,16 +2742,10 @@
         rm.addEventListener(
           "click",
           async function(){
+            state.profile.subjects
+              .splice(idx,1);
 
-            state.profile.subjects.splice(
-              idx,
-              1
-            );
-
-            await saveProfile(
-              state.profileKey,
-              state.profile
-            );
+            await persistNow();
 
             renderSettings();
           }
@@ -3665,10 +2759,7 @@
     );
   }
 
-  /* =========================
-     EVENTS
-  ========================= */
-
+  // ---------- wiring ----------
   document.getElementById(
     "btn-login"
   ).addEventListener(
@@ -3687,19 +2778,20 @@
     }
   );
 
-  document.querySelectorAll(
-    ".tab-btn"
-  ).forEach(function(b){
-
-    b.addEventListener(
-      "click",
-      function(){
-        switchTab(
-          b.dataset.tab
+  document
+    .querySelectorAll(".tab-btn")
+    .forEach(
+      function(b){
+        b.addEventListener(
+          "click",
+          function(){
+            switchTab(
+              b.dataset.tab
+            );
+          }
         );
       }
     );
-  });
 
   document.getElementById(
     "btn-logout"
@@ -3738,7 +2830,6 @@
   ).addEventListener(
     "click",
     function(){
-
       var input =
         document.getElementById(
           "new-task-input"
@@ -3750,9 +2841,9 @@
       if(!val) return;
 
       state.currentEntry.tasks.push({
-        id: uid(),
-        label: val,
-        done: false
+        id:uid(),
+        label:val,
+        done:false
       });
 
       input.value = "";
@@ -3770,11 +2861,12 @@
   ).addEventListener(
     "keydown",
     function(e){
-
       if(e.key === "Enter"){
-        document.getElementById(
-          "btn-add-task"
-        ).click();
+        document
+          .getElementById(
+            "btn-add-task"
+          )
+          .click();
       }
     }
   );
@@ -3798,7 +2890,6 @@
   ).addEventListener(
     "click",
     async function(){
-
       var input =
         document.getElementById(
           "new-subject-input"
@@ -3812,10 +2903,9 @@
       if(
         state.profile.subjects.some(
           function(s){
-            return (
+            return
               s.trim().toLowerCase() ===
-              val.toLowerCase()
-            );
+              val.toLowerCase();
           }
         )
       ){
@@ -3826,11 +2916,10 @@
       state.profile.subjects.push(val);
 
       if(state.currentEntry){
-
         state.currentEntry.tasks.push({
-          id: uid(),
-          label: val,
-          done: false
+          id:uid(),
+          label:val,
+          done:false
         });
       }
 
@@ -3853,11 +2942,12 @@
   ).addEventListener(
     "keydown",
     function(e){
-
       if(e.key === "Enter"){
-        document.getElementById(
-          "btn-add-subject"
-        ).click();
+        document
+          .getElementById(
+            "btn-add-subject"
+          )
+          .click();
       }
     }
   );
@@ -3867,16 +2957,17 @@
   ).addEventListener(
     "change",
     async function(e){
-
-      var hex = e.target.value;
+      var hex =
+        e.target.value;
 
       var theme = {
-        accent: hex,
-        dim: darkenHex(hex, 60),
-        text: textColorFor(hex)
+        accent:hex,
+        dim:darkenHex(hex,60),
+        text:textColorFor(hex)
       };
 
-      state.profile.theme = theme;
+      state.profile.theme =
+        theme;
 
       applyTheme(theme);
 
@@ -3891,13 +2982,14 @@
   ).addEventListener(
     "change",
     async function(e){
-
       state.profile.schoolName =
         e.target.value.trim();
 
-      document.querySelector(
-        "#screen-dashboard .who .sub"
-      ).textContent =
+      document
+        .querySelector(
+          "#screen-dashboard .who .sub"
+        )
+        .textContent =
         state.profile.schoolName ||
         "مسار البكالوريا 2027";
 
@@ -3910,7 +3002,6 @@
   ).addEventListener(
     "change",
     function(e){
-
       var file =
         e.target.files &&
         e.target.files[0];
@@ -3930,12 +3021,11 @@
 
       reader.onload =
         function(ev){
-
-          var img = new Image();
+          var img =
+            new Image();
 
           img.onload =
             async function(){
-
               var maxW = 900;
 
               var scale =
@@ -3956,7 +3046,9 @@
                 img.height * scale;
 
               var ctx =
-                canvas.getContext("2d");
+                canvas.getContext(
+                  "2d"
+                );
 
               ctx.drawImage(
                 img,
@@ -4008,7 +3100,6 @@
   ).addEventListener(
     "click",
     async function(){
-
       state.profile.bgImage = null;
 
       applyBackground(null);
@@ -4023,10 +3114,7 @@
     }
   );
 
-  /* =========================
-     INIT
-  ========================= */
-
+  // ---------- init ----------
   updateCountdown();
 
   setInterval(
@@ -4038,5 +3126,6 @@
 
 })();
 </script>
+
 </body>
 </html>
